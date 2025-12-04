@@ -1,5 +1,3 @@
-<!-- index.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,27 +5,212 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/logo.png" type="image/x-icon">
-    <title>Nyantakyi Francis - Portfolio</title>
-    <meta name="description" content="Software Developer & Educator - Portfolio of Nyantakyi Francis">
+
+    <title>Francis Nyantakyi | Software Developer, Data Visualization & Web Applications</title>
+    <meta name="description"
+        content="Francis Nyantakyi's Professional Portfolio. Bridging technology and education. Expertise in JavaScript, C#, API Integration, and Data Visualization tools like Tableau & Power BI.">
+
+    <link rel="canonical" href="https://nyantakyi-francis.github.io/portfolio/">
+
+    <meta name="author" content="Francis Nyantakyi">
+
+    <meta name="keywords"
+        content="Francis Nyantakyi, Francis, Nyantakyi, Most handsome, Technology, Software Developer, Ghana, Web Applications, JavaScript, C#, Data Visualization, Tableau, Power BI, JSON, Portfolio, Education Tech">
+
+    <meta property="og:title" content="Francis Nyantakyi - Software Developer & Educator">
+
+    <meta property="og:description"
+        content="Francis Nyantakyi's Professional Portfolio. Expertise in Web Development, C#, and Data Visualization.">
+
+    <meta property="og:image" content="https://nyantakyi-francis.github.io/portfolio/images/social_share_image.png">
+
+    <meta property="og:url" content="https://nyantakyi-francis.github.io/portfolio/">
+
+    <meta property="profile:username" content="nyantakyi-francis-603497278">
+    <meta property="profile:first_name" content="Francis">
+    <meta property="profile:last_name" content="Nyantakyi">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@NyantakyiF67049">
+
     <link rel="stylesheet" href="css/styles.css">
+
+    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+
 </head>
+<>
+    <nav class="nav">
+        <div class="nav-container">
+            <a class="nav-logo" href="#home">
+            <img src="images/francis-nyantakyi-software-developer.jpg"
+                alt="Francis Nyantakyi - Professional Software Developer Headshot" class="nav-logo-img">
+                <span class="nav-logo-text">NYANTAKYI FRANCIS</span>
+            </a>
 
-<body>
-    <!-- Navigation -->
-    <nav id="main-nav"></nav>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a class="nav-link active" href="#home">Home</a></li>
+                <li><a class="nav-link" href="#projects">Projects</a></li>
+                <li><a class="nav-link" href="#skills">Skills</a></li>
+                <li><a class="nav-link" href="#contact">Contact</a></li>
+                <li><a class="nav-link" href="resume.html" target="_blank">Resume</a></li>
+            </ul>
 
-    <!-- Main Content -->
-    <main id="main-content"></main>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
 
-    <!-- Footer -->
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h1 class="hero-title">NYANTAKYI FRANCIS</h1>
+            <h2 class="hero-subtitle">Software Developer & Educator</h2>
+            <p class="hero-description">Bridging technology and education to create innovative solutions that make a
+                difference.</p>
+
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-laptop-code"></i> View Projects
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-envelope"></i> Get in Touch
+                </a>
+                <a href="resume.html" target="_blank" class="btn btn-secondary">
+                    <i class="fas fa-file-alt"></i> View Resume
+                </a>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-code fa-2x stat-icon"></i>
+                    <p class="stat-number">5+</p>
+                    <p class="stat-label">Web Projects Built</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-graduation-cap fa-2x stat-icon"></i>
+                    <p class="stat-number">2</p>
+                    <p class="stat-label">Dual Degrees (Bachelor of science in Software Development & Bachelor of Education)</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-users-cog fa-2x stat-icon"></i>
+                    <p class="stat-number">OOP</p>
+                    <p class="stat-label">Object-Oriented Programming Focus</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+
+            <div class="projects-grid">
+
+                <div class="project-card fade-in">
+                    <h3 class="project-title">GeoSphere</h3>
+                    <p class="project-focus">Focus: API Integration, JavaScript</p>
+                    <p class="project-description">A dynamic web application leveraging five third-party APIs to enable
+                        users to search for a location, retrieve current news for that area, and play a location-based
+                        trivia game.</p>
+                    <a href="https://nyantakyi-francis.github.io/GeoSphere/" target="_blank" class="project-link">
+                        View Project <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="project-card fade-in">
+                    <h3 class="project-title">Stories</h3>
+                    <p class="project-focus">Focus: JSON Data Management, Frontend Assessment Logic</p>
+                    <p class="project-description">A custom website created for publishing and assessing a wide range of
+                        stories. It utilizes JSON to store story content, demonstrating
+                        expertise in client-side data handling and structured content delivery.</p>
+                    <a href="https://nyantakyi-francis.github.io/Stories/" target="_blank" class="project-link">
+                        View Project <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt" id="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Expertise</h2>
+            <div class="skills-grid">
+
+                <div class="skill-category">
+                    <h4 class="skill-category-title">Programming Languages</h4>
+                    <ul class="skill-list">
+                        <li class="skill-item"><span class="skill-bullet"></span> JavaScript, HTML, CSS</li>
+                        <li class="skill-item"><span class="skill-bullet"></span> C#, C++, Python</li>
+                        <li class="skill-item"><span class="skill-bullet"></span> SQL</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h4 class="skill-category-title">Frameworks & Tools</h4>
+                    <ul class="skill-list">
+                        <li class="skill-item"><span class="skill-bullet"></span> React, Node.js</li>
+                        <li class="skill-item"><span class="skill-bullet"></span> Git, GitHub, VS Code</li>
+                        <li class="skill-item"><span class="skill-bullet"></span> API Integration, Responsive Design
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h4 class="skill-category-title">Data, Databases & Concepts</h4>
+                    <ul class="skill-list">
+                        <li class="skill-item"><span class="skill-bullet"></span> Data Visualization: Tableau, Power
+                            BI</li>
+                        <li class="skill-item"><span class="skill-bullet"></span> Visualization Tools:  Flourish,
+                            Datawrapper</li>
+                        <li class="skill-item"><span class="skill-bullet"></span> Database Design (MySQL)</li>
+                        <li class="skill-item"><span class="skill-bullet"></span> OOP, Data Structures & Algorithms</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="contact-card text-center">
+                <h2 class="contact-title">Let's Work Together</h2>
+                <p class="hero-description" style="color: white; margin-bottom: 2rem;">I'm always interested in hearing
+                    about new projects and opportunities.</p>
+
+                <div class="hero-buttons">
+                    <a href="mailto:nyantakyifrancis54@gmail.com" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i> Email
+                    </a>
+                    <a href="http://wa.me/233595715528" target="_blank" class="btn btn-whatsapp" aria-label="Connect on WhatsApp">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                    <a href="https://linkedin.com/in/nyantakyi-francis-603497278" target="_blank"
+                        class="btn btn-secondary">
+                        <i class="fab fa-linkedin-in"></i> LinkedIn
+                    </a>
+                    <a href="resume.html" target="_blank" class="btn btn-secondary">
+                        <i class="fas fa-file-alt"></i> View Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="container">
             <p>&copy; 2025 Nyantakyi Francis. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Load modules -->
-    <script type="module" src="js/main.js"></script>
+    <button id="backToTop" class="btn btn-primary" aria-label="Back to Top"
+        style="position: fixed; bottom: 20px; right: 20px; z-index: 999;">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+<script src="js/scripts.js" defer></script>
 </body>
 
 </html>
