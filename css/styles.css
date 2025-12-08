@@ -1089,3 +1089,70 @@ html {
     background: var(--primary-color);
     color: var(--text-white);
 }
+/* ===================================
+   HERO SECTION IMAGE STYLES
+   =================================== */
+
+/* Container for the text and image to sit side-by-side */
+.hero-main-content {
+    display: flex;
+    flex-direction: column;
+    /* Stack vertically on small screens by default */
+    align-items: center;
+    gap: 2rem;
+    /* Spacing between the text and image */
+    margin-bottom: 3rem;
+    /* Space before the stats grid */
+}
+
+/* Image container styling */
+.hero-image-area {
+    width: 100%;
+    max-width: 300px;
+    /* Max size for the image area */
+    display: flex;
+    justify-content: center;
+    order: -1;
+    /* Place the image above the text on mobile */
+}
+
+/* Profile image styling (Circular, centered) */
+.profile-hero-image {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    /* Makes the image circular */
+    border: 5px solid var(--primary-color);
+    /* Adds a professional border */
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.5);
+    /* Subtle glowing effect */
+}
+
+/* On larger screens (Desktop/Tablet) */
+@media (min-width: 900px) {
+    .hero-main-content {
+        flex-direction: row;
+        /* Layout horizontally */
+        text-align: left;
+    }
+
+    .hero-text-area {
+        flex: 1.5;
+        /* Gives the text area more space */
+        text-align: left;
+        /* Aligns text left on desktop */
+    }
+
+    .hero-image-area {
+        flex: 1;
+        /* Gives the image area less space */
+        order: 0;
+        /* Place the image back to the right */
+    }
+
+    /* Adjust button alignment since text is now left-aligned */
+    .hero-buttons {
+        justify-content: flex-start;
+    }
+}
