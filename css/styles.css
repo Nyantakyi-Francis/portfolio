@@ -186,7 +186,8 @@ body {
     margin: 0 auto 2rem;
 }
 
-.hero-buttons {
+#contact .hero-buttons {
+    text-align: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
