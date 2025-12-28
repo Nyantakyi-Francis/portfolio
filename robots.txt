@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+
+Sitemap: https://nyantakyi-francis.github.io/portfolio/sitemap.xml
