@@ -68,3 +68,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
+window.addEventListener('scroll', () => {
+    const cards = document.querySelectorAll('.project-card');
+    const stickyTop = 100; // Matches the 'top' value in your CSS
+
+    cards.forEach((card) => {
+        const rect = card.getBoundingClientRect();
+        
+        // Check if the card has hit the sticky "ceiling"
+        if (rect.top <= stickyTop) {
+            // Calculate how much of the card has been "pushed" upward
+            // As the card moves up, 'progress' goes from 0 to 1
+            const progress = Math.min(Math.max((stickyTop - rect.top) / 400, 0), 1);
+            
+            // Apply shrinking and fading
+            const scaleValue = 1 - (progress * 0.1); // Shrinks to 90%
+            const opacityValue = 1 - (progress * 0.5); // Fades to 50%
+            
+            card.style.transform = `scale(${scaleValue})`;
+            card.style.opacity = opacityValue;
+        } else {
+            // Reset to original state if scrolling back up
+            card.style.transform = `scale(1)`;
+            card.style.opacity = 1;
+        }
+    });
+});
