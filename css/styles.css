@@ -332,7 +332,7 @@ body {
 
     
     background: var(--glass-bg);
-    backdrop-filter: blur(16px);
+    backdrop-filter: blur(3px);
     border: 1px solid var(--glass-border);
     border-radius: 1rem;
     padding: 1.5rem;
@@ -340,7 +340,7 @@ body {
 
     /* ANIMATION SUPPORT */
     /* Added transform/opacity to support the JavaScript shrinking effect */
-    transition: var(--transition), transform 0.2s ease, opacity 0.2s ease;
+    transition: var(--transition), transform 0.2s ease, opacity 0.1s ease;
     transform-origin: center top;
 }
 
