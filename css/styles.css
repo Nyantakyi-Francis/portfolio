@@ -306,29 +306,67 @@ body {
 }
 
 /* ===================================
-   PROJECT CARDS
+   PROJECT CARDS - STACKING VERSION
    =================================== */
+
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
+    /* Changed to flex-column to allow cards to stack on top of each other */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    max-width: 900px;
+    margin: 0 auto;
+    /* Added padding to allow the last card to scroll up fully */
+    padding-bottom: 10vh;
 }
 
 .project-card {
+    /* STACKING LOGIC */
+    position: sticky;
+    top: 120px;
+    /* Distance from top when the card 'sticks' */
+    width: 100%;
+    margin-bottom: 1vh;
+    /* Space that allows the card to travel upward */
+
+    
     background: var(--glass-bg);
     backdrop-filter: blur(16px);
     border: 1px solid var(--glass-border);
     border-radius: 1rem;
     padding: 1.5rem;
-    transition: var(--transition);
+    box-sizing: border-box;
+
+    /* ANIMATION SUPPORT */
+    /* Added transform/opacity to support the JavaScript shrinking effect */
+    transition: var(--transition), transform 0.2s ease, opacity 0.2s ease;
+    transform-origin: center top;
 }
 
+/* Z-INDEX LAYERING */
+/* This ensures 'GeoSphere' and 'Stories' slide OVER the previous cards */
+.project-card:nth-child(1) {
+    z-index: 1;
+}
+
+.project-card:nth-child(2) {
+    z-index: 2;
+}
+
+.project-card:nth-child(3) {
+    z-index: 3;
+}
+
+/* HOVER EFFECTS */
 .project-card:hover {
     border-color: rgba(124, 58, 237, 0.4);
-    transform: translateY(-8px);
+    transform: translateY(-5px);
+    /* Slightly reduced to not break sticky flow */
     box-shadow: 0 15px 35px rgba(124, 58, 237, 0.2);
 }
 
+/* TEXT STYLING */
 .project-title {
     font-size: 1.25rem;
     font-weight: bold;
@@ -355,10 +393,16 @@ body {
     text-decoration: none;
     transition: var(--transition);
     font-weight: 500;
+    display: inline-block;
 }
 
 .project-link:hover {
     color: #a78bfa;
+}
+
+/* FIX FOR CURRENTLY IN DEVELOPMENT LABEL */
+.project-card i.fa-tools {
+    margin-right: 8px;
 }
 
 /* ===================================
