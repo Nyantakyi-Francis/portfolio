@@ -306,46 +306,46 @@ body {
 }
 
 /* ===================================
-   PROJECT CARDS - STACKING VERSION
+   PROJECT CARDS - SOLID STACKING VERSION
    =================================== */
 
 .projects-grid {
-    /* Changed to flex-column to allow cards to stack on top of each other */
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0;
     max-width: 900px;
     margin: 0 auto;
-    /* Added padding to allow the last card to scroll up fully */
     padding-bottom: 10vh;
 }
 
 .project-card {
     /* STACKING LOGIC */
     position: sticky;
-    top: 120px;
-    /* Distance from top when the card 'sticks' */
+    top: 100px;
     width: 100%;
-    margin-bottom: 1vh;
-    /* Space that allows the card to travel upward */
+    margin-bottom: 5vh;
+    /* Space for the slide-up motion */
 
-    
-    background: var(--glass-bg);
-    backdrop-filter: blur(3px);
-    border: 1px solid var(--glass-border);
+    /* SOLID DESIGN - NO TRANSPARENCY */
+    background: #1e1e1e;
+    /* Solid dark background */
+    border: 1px solid #333;
+    /* Solid border */
     border-radius: 1rem;
-    padding: 1.5rem;
+    padding: 2rem;
     box-sizing: border-box;
 
+    /* Ensure no transparency from previous styles */
+    backdrop-filter: none !important;
+
     /* ANIMATION SUPPORT */
-    /* Added transform/opacity to support the JavaScript shrinking effect */
-    transition: var(--transition), transform 0.2s ease, opacity 0.1s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
     transform-origin: center top;
 }
 
 /* Z-INDEX LAYERING */
-/* This ensures 'GeoSphere' and 'Stories' slide OVER the previous cards */
+/* Higher index = Card slides OVER the one before it */
 .project-card:nth-child(1) {
     z-index: 1;
 }
@@ -360,49 +360,50 @@ body {
 
 /* HOVER EFFECTS */
 .project-card:hover {
-    border-color: rgba(124, 58, 237, 0.4);
+    border-color: #c084fc;
     transform: translateY(-5px);
-    /* Slightly reduced to not break sticky flow */
-    box-shadow: 0 15px 35px rgba(124, 58, 237, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 /* TEXT STYLING */
 .project-title {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 0.75rem;
-    color: var(--text-white);
+    color: #ffffff;
+    /* */
 }
 
 .project-description {
-    color: var(--text-gray);
-    font-size: 0.875rem;
-    margin-bottom: 1rem;
+    color: #a1a1aa;
+    /* Light gray text for readability */
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
     line-height: 1.6;
 }
 
 .project-focus {
     color: #c084fc;
-    font-size: 0.875rem;
+    /* Matching your existing accent color */
+    font-size: 0.9rem;
     margin-bottom: 1rem;
-    font-weight: 500;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .project-link {
     color: #c084fc;
+    /* */
     text-decoration: none;
-    transition: var(--transition);
-    font-weight: 500;
-    display: inline-block;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .project-link:hover {
-    color: #a78bfa;
-}
-
-/* FIX FOR CURRENTLY IN DEVELOPMENT LABEL */
-.project-card i.fa-tools {
-    margin-right: 8px;
+    text-decoration: underline;
 }
 
 /* ===================================
