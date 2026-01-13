@@ -95,3 +95,12 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+// Dynamically update copyright year
+document.addEventListener('DOMContentLoaded', function() {
+    const footer = document.querySelector('.footer p');
+    if (footer) {
+        const currentYear = new Date().getFullYear();
+        footer.innerHTML = `&copy; ${currentYear} Nyantakyi Francis. All rights reserved.`;
+    }
+});
