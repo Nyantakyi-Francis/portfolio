@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Francis Nyantakyi | Web Developer & Data Visualization Expert</title>
+    <title>Francis Nyantakyi | Web Developer &amp; Data Visualization Expert</title>
     <meta name="description"
         content="Francis Nyantakyi's Professional Portfolio. Pursuing B.Sc. at BYU-Idaho and B.Ed. at Mampong Technical College. Expertise in JavaScript, C#, and Data Visualization." />
     <link rel="icon" type="image/png" sizes="48x48" href="https://nyantakyi-francis.github.io/portfolio/favicon.png" />
@@ -13,65 +13,41 @@
     <meta name="theme-color" content="#6ee7f7" />
     <link rel="canonical" href="https://nyantakyi-francis.github.io/portfolio/" />
     <meta name="author" content="Francis Nyantakyi" />
-    <meta name="keywords"
-        content="Francis Nyantakyi, BYU-Idaho, MAMTECH, Software Developer, Ghana, Web Applications, JavaScript, C#, Data Visualization, Tableau, Power BI" />
-    <meta property="og:title" content="Francis Nyantakyi - Software Developer & Educator" />
+    <meta property="og:title" content="Francis Nyantakyi - Software Developer &amp; Educator" />
     <meta property="og:description"
         content="Bridging technology and education. Currently pursuing dual degrees at BYU-Idaho and Mampong Technical College." />
     <meta property="og:image" content="https://nyantakyi-francis.github.io/portfolio/images/social_share_image.png" />
     <meta property="og:url" content="https://nyantakyi-francis.github.io/portfolio/" />
-
-    <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Francis Nyantakyi",
-    "url": "https://nyantakyi-francis.github.io/portfolio/",
-    "jobTitle": "Software Developer & Data Visualization Expert",
-    "alumniOf": [
-      { "@type": "CollegeOrUniversity", "name": "Brigham Young University-Idaho" },
-      { "@type": "CollegeOrUniversity", "name": "Mampong Technical College of Education" }
-    ]
-  }
-  </script>
-
-    <!-- Fonts: Clash Display (display) + DM Sans (body) -->
+    <script
+        type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Francis Nyantakyi","url":"https://nyantakyi-francis.github.io/portfolio/","jobTitle":"Software Developer & Data Visualization Expert","alumniOf":[{"@type":"CollegeOrUniversity","name":"Brigham Young University-Idaho"},{"@type":"CollegeOrUniversity","name":"Mampong Technical College of Education"}]}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@400;500&display=swap"
         rel="stylesheet" />
-
-    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-
-    <!-- GSAP + ScrollTrigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
     <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
 
-    <!-- Noise grain overlay -->
     <div class="grain" aria-hidden="true"></div>
-
-    <!-- Ambient background orbs -->
     <div class="bg-orbs" aria-hidden="true">
         <div class="orb orb-1"></div>
         <div class="orb orb-2"></div>
         <div class="orb orb-3"></div>
     </div>
 
-    <!-- ===================== NAV ===================== -->
-    <nav class="nav" id="nav">
+    <!-- NAV -->
+    <nav class="nav" id="nav" aria-label="Main navigation">
         <div class="nav-inner">
-            <a class="nav-logo" href="#home">
-                <img src="images/francis-nyantakyi-software-developer.jpg" alt="Francis Nyantakyi" class="nav-avatar" />
+            <a class="nav-logo" href="#home" aria-label="Nyantakyi Francis — return to top of page">
+                <img src="images/francis-nyantakyi-software-developer.jpg" alt="" class="nav-avatar"
+                    aria-hidden="true" />
                 <span class="nav-name">Nyantakyi Francis</span>
             </a>
-
             <ul class="nav-links" id="nav-links">
                 <li><a href="#home" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
@@ -79,26 +55,29 @@
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
                 <li>
-                    <a href="francis_nyantakyi_resume.pdf" target="_blank" class="nav-resume">
-                        <i data-lucide="file-text" class="icon-sm"></i> Resume
+                    <a href="francis_nyantakyi_resume.pdf" target="_blank" class="nav-resume"
+                        aria-label="Resume, PDF file, opens in new tab">
+                        <i data-lucide="file-text" class="icon-sm" aria-hidden="true"></i>
+                        <span>Resume</span>
                     </a>
                 </li>
             </ul>
-
-            <button class="nav-burger" id="nav-burger" aria-label="Toggle navigation" aria-expanded="false">
-                <span></span><span></span><span></span>
+            <button class="nav-burger" id="nav-burger" aria-label="Open navigation menu" aria-expanded="false"
+                aria-controls="nav-links">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
             </button>
         </div>
     </nav>
 
-    <!-- ===================== HERO ===================== -->
-    <section class="hero" id="home">
+    <!-- HERO -->
+    <section class="hero" id="home" aria-labelledby="hero-heading">
         <div class="container">
             <div class="hero-layout">
-
                 <div class="hero-text">
-                    <p class="hero-eyebrow reveal-up">Software Developer & Educator</p>
-                    <h1 class="hero-name reveal-up">
+                    <p class="hero-eyebrow reveal-up">Software Developer &amp; Educator</p>
+                    <h1 class="hero-name reveal-up" id="hero-heading">
                         Nyantakyi<br /><em>Francis</em>
                     </h1>
                     <p class="hero-bio reveal-up">
@@ -108,96 +87,85 @@
                     </p>
                     <div class="hero-actions reveal-up">
                         <a href="#projects" class="btn btn-primary">
-                            <i data-lucide="layout-grid" class="icon-sm"></i> View Projects
+                            <i data-lucide="layout-grid" class="icon-sm" aria-hidden="true"></i> View Projects
                         </a>
                         <a href="#contact" class="btn btn-ghost">
-                            <i data-lucide="mail" class="icon-sm"></i> Get in Touch
+                            <i data-lucide="mail" class="icon-sm" aria-hidden="true"></i> Get in Touch
                         </a>
                     </div>
                 </div>
-
                 <div class="hero-image reveal-right">
                     <div class="avatar-ring">
-                        <img src="images/francis-nyantakyi-software-developer.jpg" alt="Francis Nyantakyi"
+                        <img src="images/francis-nyantakyi-software-developer.jpg"
+                            alt="Francis Nyantakyi, Software Developer and Educator based in Ghana"
                             class="avatar-img" />
                     </div>
-                    <div class="hero-badge">
-                        <i data-lucide="map-pin" class="icon-xs"></i> Ghana, West Africa
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Stats -->
-            <div class="stats-row">
-                <div class="stat reveal-up">
-                    <span class="stat-num" data-target="6">0</span><span class="stat-unit">+</span>
-                    <p class="stat-label">Web Projects</p>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat reveal-up">
-                    <span class="stat-num" data-target="2">0</span>
-                    <p class="stat-label">Concurrent Degrees</p>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat reveal-up">
-                    <span class="stat-num">3</span>
-                    <p class="stat-label">Languages Mastered</p>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat reveal-up">
-                    <span class="stat-num">Active</span>
-                    <p class="stat-label">Data Viz Projects</p>
+                    <p class="hero-badge">
+                        <i data-lucide="map-pin" class="icon-xs" aria-hidden="true"></i>
+                        <span>Ghana, West Africa</span>
+                    </p>
                 </div>
             </div>
+
+            <dl class="stats-row" aria-label="Key highlights">
+                <div class="stat reveal-up">
+                    <dt class="stat-label">Web Projects</dt>
+                    <dd><span class="stat-num" data-target="6">0</span><span class="stat-unit"
+                            aria-hidden="true">+</span></dd>
+                </div>
+                <div class="stat-divider" aria-hidden="true"></div>
+                <div class="stat reveal-up">
+                    <dt class="stat-label">Concurrent Degrees</dt>
+                    <dd><span class="stat-num" data-target="2">0</span></dd>
+                </div>
+                <div class="stat-divider" aria-hidden="true"></div>
+                <div class="stat reveal-up">
+                    <dt class="stat-label">Languages Mastered</dt>
+                    <dd><span class="stat-num">3</span></dd>
+                </div>
+                <div class="stat-divider" aria-hidden="true"></div>
+                <div class="stat reveal-up">
+                    <dt class="stat-label">Data Viz Projects</dt>
+                    <dd><span class="stat-num">Active</span></dd>
+                </div>
+            </dl>
         </div>
     </section>
 
-    <!-- ===================== ABOUT ===================== -->
-    <section class="section" id="about">
+    <!-- ABOUT -->
+    <section class="section" id="about" aria-labelledby="about-heading">
         <div class="container">
             <div class="section-header reveal-up">
                 <p class="section-eyebrow">Background</p>
-                <h2 class="section-title">Academic &amp; Professional Journey</h2>
+                <h2 class="section-title" id="about-heading">Academic &amp; Professional Journey</h2>
             </div>
-
             <div class="about-grid">
-                <!-- Bio card -->
                 <div class="about-bio reveal-up">
-                    <p>
-                        I sit at the intersection of <strong>Computer Science and Pedagogy</strong>.
-                        My studies at BYU-Idaho sharpen my skills in modern software architecture
-                        and scalable web systems, while Mampong Technical College hones my ability
-                        to communicate complex ideas to diverse audiences.
+                    <p>I sit at the intersection of <strong>Computer Science and Pedagogy</strong>. My studies at
+                        BYU-Idaho sharpen my skills in modern software architecture and scalable web systems, while
+                        Mampong Technical College hones my ability to communicate complex ideas to diverse audiences.
                     </p>
-                    <p>
-                        I believe technology is most effective when it is instructional and
-                        accessible — clean code that serves real people in real contexts.
-                    </p>
-                    <a href="francis_nyantakyi_resume.pdf" target="_blank" class="btn btn-outline mt-md">
-                        <i data-lucide="download" class="icon-sm"></i> Download Resume
+                    <p>I believe technology is most effective when it is instructional and accessible — clean code that
+                        serves real people in real contexts.</p>
+                    <a href="francis_nyantakyi_resume.pdf" target="_blank" class="btn btn-outline mt-md"
+                        aria-label="Download resume, PDF file, opens in new tab">
+                        <i data-lucide="download" class="icon-sm" aria-hidden="true"></i>
+                        Download Resume <span class="sr-only">(PDF)</span>
                     </a>
                 </div>
-
-                <!-- Education cards -->
                 <div class="edu-stack">
                     <div class="edu-card reveal-right">
-                        <div class="edu-icon">
-                            <i data-lucide="graduation-cap"></i>
-                        </div>
+                        <div class="edu-icon" aria-hidden="true"><i data-lucide="graduation-cap"></i></div>
                         <div class="edu-body">
-                            <p class="edu-degree">B.Sc. Web &amp; Computer Programming</p>
+                            <h3 class="edu-degree">B.Sc. Web &amp; Computer Programming</h3>
                             <p class="edu-school">Brigham Young University–Idaho</p>
                             <p class="edu-detail">Software architecture · Scalable web systems · Data visualization</p>
                         </div>
                     </div>
-
-                    <div class="edu-card reveal-right" style="--delay: 0.1s">
-                        <div class="edu-icon">
-                            <i data-lucide="book-open"></i>
-                        </div>
+                    <div class="edu-card reveal-right" style="--delay:0.1s">
+                        <div class="edu-icon" aria-hidden="true"><i data-lucide="book-open"></i></div>
                         <div class="edu-body">
-                            <p class="edu-degree">Bachelor of Education</p>
+                            <h3 class="edu-degree">Bachelor of Education</h3>
                             <p class="edu-school">Mampong Technical College of Education</p>
                             <p class="edu-detail">Pedagogy · Curriculum design · Technical communication</p>
                         </div>
@@ -207,102 +175,93 @@
         </div>
     </section>
 
-    <!-- ===================== PROJECTS ===================== -->
-    <section class="section section-dark" id="projects">
+    <!-- PROJECTS -->
+    <section class="section section-dark" id="projects" aria-labelledby="projects-heading">
         <div class="container">
             <div class="section-header reveal-up">
                 <p class="section-eyebrow">Work</p>
-                <h2 class="section-title">Featured Projects</h2>
+                <h2 class="section-title" id="projects-heading">Featured Projects</h2>
             </div>
+            <div class="projects-list" role="list">
 
-            <div class="projects-list">
-
-                <article class="project-item reveal-up">
-                    <div class="project-meta">
+                <article class="project-item reveal-up" role="listitem">
+                    <div class="project-meta" aria-hidden="true">
                         <span class="project-num">01</span>
                         <span class="project-tag">Education · Interactive</span>
                     </div>
                     <div class="project-body">
                         <h3 class="project-name">Math Quiz Portal</h3>
-                        <p class="project-desc">
-                            A premium, interactive web platform for students preparing for WASSCE
-                            examinations. Centralized hub for rigorous mathematical testing and
-                            student outreach, curated and maintained by Francis Nyantakyi.
-                        </p>
+                        <p class="project-desc">A premium, interactive web platform for students preparing for WASSCE
+                            examinations. Centralized hub for rigorous mathematical testing and student outreach,
+                            curated by Francis Nyantakyi.</p>
                         <a href="https://nyantakyi-francis.github.io/math-quiz-portal/index.html" target="_blank"
-                            class="project-link">
-                            View Project <i data-lucide="arrow-up-right" class="icon-sm"></i>
+                            class="project-link" aria-label="View Math Quiz Portal project, opens in new tab">
+                            View Project <i data-lucide="arrow-up-right" class="icon-sm" aria-hidden="true"></i>
                         </a>
                     </div>
                 </article>
 
-                <article class="project-item reveal-up">
-                    <div class="project-meta">
+                <article class="project-item reveal-up" role="listitem">
+                    <div class="project-meta" aria-hidden="true">
                         <span class="project-num">02</span>
                         <span class="project-tag tag-wip">In Development</span>
                     </div>
                     <div class="project-body">
                         <h3 class="project-name">Data Insights Web App</h3>
-                        <p class="project-desc">
-                            A robust dashboard transforming complex datasets into interactive visual
-                            narratives. Built with React and D3.js, focused on actionable insights
-                            through modern data visualization techniques.
-                        </p>
-                        <span class="project-link project-link--disabled">
-                            Coming Soon <i data-lucide="clock" class="icon-sm"></i>
-                        </span>
+                        <p class="project-desc">A robust dashboard transforming complex datasets into interactive visual
+                            narratives. Built with React and D3.js, focused on actionable insights through modern data
+                            visualization techniques.</p>
+                        <p class="project-link project-link--disabled"><i data-lucide="clock" class="icon-sm"
+                                aria-hidden="true"></i> Currently in development</p>
                     </div>
                 </article>
 
-                <article class="project-item reveal-up">
-                    <div class="project-meta">
+                <article class="project-item reveal-up" role="listitem">
+                    <div class="project-meta" aria-hidden="true">
                         <span class="project-num">03</span>
                         <span class="project-tag">Non-Profit · Responsive</span>
                     </div>
                     <div class="project-body">
                         <h3 class="project-name">Marvelous Touch Foundation</h3>
-                        <p class="project-desc">
-                            Professional web presence for a Ghanaian NGO empowering rural women
-                            and girls. Built with clear information hierarchy and mobile accessibility
-                            to serve local outreach and international donor engagement.
-                        </p>
-                        <a href="https://marveloustouchfoundation.com/" target="_blank" class="project-link">
-                            View Live Site <i data-lucide="arrow-up-right" class="icon-sm"></i>
+                        <p class="project-desc">Professional web presence for a Ghanaian NGO empowering rural women and
+                            girls. Built with clear information hierarchy and mobile accessibility to serve local
+                            outreach and international donor engagement.</p>
+                        <a href="https://marveloustouchfoundation.com/" target="_blank" class="project-link"
+                            aria-label="View Marvelous Touch Foundation website, opens in new tab">
+                            View Live Site <i data-lucide="arrow-up-right" class="icon-sm" aria-hidden="true"></i>
                         </a>
                     </div>
                 </article>
 
-                <article class="project-item reveal-up">
-                    <div class="project-meta">
+                <article class="project-item reveal-up" role="listitem">
+                    <div class="project-meta" aria-hidden="true">
                         <span class="project-num">04</span>
                         <span class="project-tag">API Integration · JavaScript</span>
                     </div>
                     <div class="project-body">
                         <h3 class="project-name">GeoSphere</h3>
-                        <p class="project-desc">
-                            Dynamic web application leveraging five third-party APIs for location
-                            search, local news retrieval, and trivia gameplay — demonstrating
-                            real-world API orchestration.
-                        </p>
-                        <a href="https://nyantakyi-francis.github.io/GeoSphere/" target="_blank" class="project-link">
-                            View Project <i data-lucide="arrow-up-right" class="icon-sm"></i>
+                        <p class="project-desc">Dynamic web application leveraging five third-party APIs for location
+                            search, local news retrieval, and trivia gameplay — demonstrating real-world API
+                            orchestration.</p>
+                        <a href="https://nyantakyi-francis.github.io/GeoSphere/" target="_blank" class="project-link"
+                            aria-label="View GeoSphere project, opens in new tab">
+                            View Project <i data-lucide="arrow-up-right" class="icon-sm" aria-hidden="true"></i>
                         </a>
                     </div>
                 </article>
 
-                <article class="project-item reveal-up">
-                    <div class="project-meta">
+                <article class="project-item reveal-up" role="listitem">
+                    <div class="project-meta" aria-hidden="true">
                         <span class="project-num">05</span>
                         <span class="project-tag">JSON · Data Management</span>
                     </div>
                     <div class="project-body">
                         <h3 class="project-name">Stories</h3>
-                        <p class="project-desc">
-                            Custom platform for publishing and assessing stories, demonstrating
-                            expertise in client-side data handling and structured JSON delivery.
-                        </p>
-                        <a href="https://nyantakyi-francis.github.io/Stories/" target="_blank" class="project-link">
-                            View Project <i data-lucide="arrow-up-right" class="icon-sm"></i>
+                        <p class="project-desc">Custom platform for publishing and assessing stories, demonstrating
+                            expertise in client-side data handling and structured JSON delivery.</p>
+                        <a href="https://nyantakyi-francis.github.io/Stories/" target="_blank" class="project-link"
+                            aria-label="View Stories project, opens in new tab">
+                            View Project <i data-lucide="arrow-up-right" class="icon-sm" aria-hidden="true"></i>
                         </a>
                     </div>
                 </article>
@@ -311,130 +270,115 @@
         </div>
     </section>
 
-    <!-- ===================== SKILLS ===================== -->
-    <section class="section" id="skills">
+    <!-- SKILLS -->
+    <section class="section" id="skills" aria-labelledby="skills-heading">
         <div class="container">
             <div class="section-header reveal-up">
                 <p class="section-eyebrow">Expertise</p>
-                <h2 class="section-title">Technical Skills</h2>
+                <h2 class="section-title" id="skills-heading">Technical Skills</h2>
             </div>
-
             <div class="skills-grid">
 
                 <div class="skill-card reveal-up">
-                    <div class="skill-card-icon">
-                        <i data-lucide="code-2"></i>
-                    </div>
-                    <h4 class="skill-card-title">Languages</h4>
-                    <div class="skill-tags">
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">C#</span>
-                        <span class="tag">C++</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">SQL</span>
-                    </div>
+                    <div class="skill-card-icon" aria-hidden="true"><i data-lucide="code-2"></i></div>
+                    <h3 class="skill-card-title">Languages</h3>
+                    <ul class="skill-tags" aria-label="Programming languages">
+                        <li class="tag">JavaScript</li>
+                        <li class="tag">HTML</li>
+                        <li class="tag">CSS</li>
+                        <li class="tag">C#</li>
+                        <li class="tag">C++</li>
+                        <li class="tag">Python</li>
+                        <li class="tag">SQL</li>
+                    </ul>
                 </div>
 
-                <div class="skill-card reveal-up" style="--delay: 0.1s">
-                    <div class="skill-card-icon">
-                        <i data-lucide="layers"></i>
-                    </div>
-                    <h4 class="skill-card-title">Frameworks &amp; Tools</h4>
-                    <div class="skill-tags">
-                        <span class="tag">React</span>
-                        <span class="tag">Node.js</span>
-                        <span class="tag">Git</span>
-                        <span class="tag">GitHub</span>
-                        <span class="tag">VS Code</span>
-                        <span class="tag">API Integration</span>
-                        <span class="tag">D3.js</span>
-                    </div>
+                <div class="skill-card reveal-up" style="--delay:0.1s">
+                    <div class="skill-card-icon" aria-hidden="true"><i data-lucide="layers"></i></div>
+                    <h3 class="skill-card-title">Frameworks &amp; Tools</h3>
+                    <ul class="skill-tags" aria-label="Frameworks and tools">
+                        <li class="tag">React</li>
+                        <li class="tag">Node.js</li>
+                        <li class="tag">Git</li>
+                        <li class="tag">GitHub</li>
+                        <li class="tag">VS Code</li>
+                        <li class="tag">API Integration</li>
+                        <li class="tag">D3.js</li>
+                    </ul>
                 </div>
 
-                <div class="skill-card reveal-up" style="--delay: 0.2s">
-                    <div class="skill-card-icon">
-                        <i data-lucide="bar-chart-2"></i>
-                    </div>
-                    <h4 class="skill-card-title">Data &amp; Design</h4>
-                    <div class="skill-tags">
-                        <span class="tag">Tableau</span>
-                        <span class="tag">Power BI</span>
-                        <span class="tag">Flourish</span>
-                        <span class="tag">Datawrapper</span>
-                        <span class="tag">MySQL</span>
-                        <span class="tag">Database Design</span>
-                    </div>
+                <div class="skill-card reveal-up" style="--delay:0.2s">
+                    <div class="skill-card-icon" aria-hidden="true"><i data-lucide="bar-chart-2"></i></div>
+                    <h3 class="skill-card-title">Data &amp; Design</h3>
+                    <ul class="skill-tags" aria-label="Data and design tools">
+                        <li class="tag">Tableau</li>
+                        <li class="tag">Power BI</li>
+                        <li class="tag">Flourish</li>
+                        <li class="tag">Datawrapper</li>
+                        <li class="tag">MySQL</li>
+                        <li class="tag">Database Design</li>
+                    </ul>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- ===================== CONTACT ===================== -->
-    <section class="section section-dark" id="contact">
+    <!-- CONTACT -->
+    <section class="section section-dark" id="contact" aria-labelledby="contact-heading">
         <div class="container">
             <div class="contact-wrap reveal-up">
                 <div class="contact-text">
                     <p class="section-eyebrow">Let's Connect</p>
-                    <h2 class="section-title">Open to Collaboration</h2>
-                    <p class="contact-sub">
-                        Available for project collaborations, internship opportunities,
-                        and conversations about technology and education.
-                    </p>
+                    <h2 class="section-title" id="contact-heading">Open to Collaboration</h2>
+                    <p class="contact-sub">Available for project collaborations, internship opportunities, and
+                        conversations about technology and education.</p>
                 </div>
                 <div class="contact-actions">
-                    <a href="mailto:nyantakyifrancis54@gmail.com" class="contact-btn">
-                        <i data-lucide="mail"></i>
-                        <span>
-                            <small>Send me an email</small>
-                            nyantakyifrancis54@gmail.com
-                        </span>
+                    <a href="mailto:nyantakyifrancis54@gmail.com" class="contact-btn"
+                        aria-label="Send Francis an email at nyantakyifrancis54@gmail.com">
+                        <i data-lucide="mail" aria-hidden="true"></i>
+                        <span><small>Send me an email</small>nyantakyifrancis54@gmail.com</span>
                     </a>
-                    <a href="http://wa.me/233595715528" target="_blank" class="contact-btn contact-btn--wa">
-                        <i data-lucide="message-circle"></i>
-                        <span>
-                            <small>Chat on WhatsApp</small>
-                            +233 595 715 528
-                        </span>
+                    <a href="https://wa.me/233595715528" target="_blank" class="contact-btn contact-btn--wa"
+                        aria-label="Chat with Francis on WhatsApp, opens in new tab">
+                        <i data-lucide="message-circle" aria-hidden="true"></i>
+                        <span><small>Chat on WhatsApp</small>+233 595 715 528</span>
                     </a>
                     <a href="https://linkedin.com/in/nyantakyi-francis-603497278" target="_blank"
-                        class="contact-btn contact-btn--li">
-                        <i data-lucide="linkedin"></i>
-                        <span>
-                            <small>Connect on LinkedIn</small>
-                            Nyantakyi Francis
-                        </span>
+                        class="contact-btn contact-btn--li"
+                        aria-label="Connect with Francis on LinkedIn, opens in new tab">
+                        <i data-lucide="linkedin" aria-hidden="true"></i>
+                        <span><small>Connect on LinkedIn</small>Nyantakyi Francis</span>
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===================== FOOTER ===================== -->
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="container footer-inner">
-            <p class="footer-copy">
-                &copy; <span id="footer-year"></span> Nyantakyi Francis. Designed &amp; built with care.
-            </p>
-            <div class="footer-links">
-                <a href="https://github.com/nyantakyi-francis" target="_blank" aria-label="GitHub">
-                    <i data-lucide="github"></i>
+            <p class="footer-copy">&copy; <span id="footer-year"></span> Nyantakyi Francis. Designed &amp; built with
+                care.</p>
+            <nav class="footer-links" aria-label="Social media links">
+                <a href="https://github.com/nyantakyi-francis" target="_blank"
+                    aria-label="GitHub profile, opens in new tab">
+                    <i data-lucide="github" aria-hidden="true"></i>
                 </a>
-                <a href="https://linkedin.com/in/nyantakyi-francis-603497278" target="_blank" aria-label="LinkedIn">
-                    <i data-lucide="linkedin"></i>
+                <a href="https://linkedin.com/in/nyantakyi-francis-603497278" target="_blank"
+                    aria-label="LinkedIn profile, opens in new tab">
+                    <i data-lucide="linkedin" aria-hidden="true"></i>
                 </a>
-                <a href="mailto:nyantakyifrancis54@gmail.com" aria-label="Email">
-                    <i data-lucide="mail"></i>
+                <a href="mailto:nyantakyifrancis54@gmail.com" aria-label="Email Francis Nyantakyi">
+                    <i data-lucide="mail" aria-hidden="true"></i>
                 </a>
-            </div>
+            </nav>
         </div>
     </footer>
 
-    <!-- Back to top -->
-    <button class="back-top" id="back-top" aria-label="Back to top">
-        <i data-lucide="arrow-up"></i>
+    <button class="back-top" id="back-top" aria-label="Scroll back to top of page">
+        <i data-lucide="arrow-up" aria-hidden="true"></i>
     </button>
 
     <script src="js/scripts.js"></script>
