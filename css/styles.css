@@ -631,6 +631,13 @@ body {
     font-weight: 500;
 }
 
+.about-actions {
+    margin-top: var(--space-lg);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+}
+
 .edu-stack {
     display: flex;
     flex-direction: column;
@@ -690,6 +697,22 @@ body {
     font-size: 0.8rem;
     color: var(--text-3);
     line-height: 1.6;
+}
+
+.edu-link {
+    margin-top: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: var(--accent);
+    font-size: 0.82rem;
+    font-weight: 500;
+    transition: color var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+
+.edu-link:hover {
+    color: var(--text-1);
+    transform: translateX(2px);
 }
 
 /* ======================================================
@@ -1391,6 +1414,7 @@ body {
 .nav-link:focus-visible,
 .nav-resume:focus-visible,
 .btn:focus-visible,
+.edu-link:focus-visible,
 .project-link:focus-visible,
 .contact-btn:focus-visible,
 .back-top:focus-visible,
