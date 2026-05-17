@@ -17,6 +17,42 @@
   const navLinks = document.querySelectorAll('.nav-link');
   const burger = document.getElementById('nav-burger');
   const navMenu = document.getElementById('nav-links');
+  const filterButtons = document.querySelectorAll('.filter-btn[data-filter]');
+  const projectItems = document.querySelectorAll('.projects-list .project-item[data-cats]');
+  const projectCount = document.getElementById('project-count');
+
+  function applyProjectFilter(filter) {
+    const normalizedFilter = (filter || 'all').toLowerCase();
+    let shown = 0;
+
+    projectItems.forEach((item) => {
+      const cats = (item.dataset.cats || '').toLowerCase().split(/\s+/).filter(Boolean);
+      const matches = normalizedFilter === 'all' || cats.includes(normalizedFilter);
+      item.hidden = !matches;
+      if (matches) {
+        shown += 1;
+      }
+    });
+
+    if (projectCount) {
+      projectCount.textContent = String(shown);
+    }
+
+    filterButtons.forEach((btn) => {
+      const isActive = (btn.dataset.filter || '').toLowerCase() === normalizedFilter;
+      btn.classList.toggle('is-active', isActive);
+      btn.setAttribute('aria-pressed', String(isActive));
+    });
+  }
+
+  if (filterButtons.length && projectItems.length) {
+    filterButtons.forEach((btn) => {
+      btn.addEventListener('click', () => applyProjectFilter(btn.dataset.filter || 'all'));
+    });
+    applyProjectFilter('all');
+  } else if (projectCount) {
+    projectCount.textContent = String(projectItems.length || 0);
+  }
 
   if (!prefersReducedMotion && typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);

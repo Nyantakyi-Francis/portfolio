@@ -7,8 +7,8 @@
     <title>Francis Nyantakyi | EdTech &amp; Social Impact Developer</title>
     <meta name="description"
         content="Francis Nyantakyi's professional portfolio. EdTech and social impact developer building educational platforms, dashboards, and community-focused web experiences." />
-    <link rel="icon" type="image/png" sizes="48x48" href="https://nyantakyi-francis.github.io/portfolio/favicon.png" />
-    <link rel="apple-touch-icon" href="https://nyantakyi-francis.github.io/portfolio/favicon.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="favicon.png" />
+    <link rel="apple-touch-icon" href="favicon.png" />
     <link rel="manifest" href="site.webmanifest" />
     <meta name="theme-color" content="#6ee7f7" />
     <link rel="canonical" href="https://nyantakyi-francis.github.io/portfolio/" />
@@ -25,13 +25,15 @@
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@400;500&display=swap"
         rel="stylesheet" />
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script defer src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
+
+    <a class="skip-link" href="#main">Skip to main content</a>
 
     <div class="grain" aria-hidden="true"></div>
     <div class="bg-orbs" aria-hidden="true">
@@ -43,8 +45,12 @@
     <nav class="nav" id="nav" aria-label="Main navigation">
         <div class="nav-inner">
             <a class="nav-logo" href="#home" aria-label="Nyantakyi Francis - return to top of page">
-                <img src="images/francis-nyantakyi-software-developer.jpg" alt="" class="nav-avatar"
-                    aria-hidden="true" />
+                <picture aria-hidden="true">
+                    <source srcset="images/francis-nyantakyi-software-developer.avif" type="image/avif" />
+                    <source srcset="images/francis-nyantakyi-software-developer.webp" type="image/webp" />
+                    <img src="images/francis-nyantakyi-software-developer.jpg" alt="" class="nav-avatar"
+                        aria-hidden="true" width="36" height="36" />
+                </picture>
                 <span class="nav-name">Nyantakyi Francis</span>
             </a>
             <ul class="nav-links" id="nav-links">
@@ -70,6 +76,7 @@
         </div>
     </nav>
 
+    <main id="main" tabindex="-1">
     <section class="hero" id="home" aria-labelledby="hero-heading">
         <div class="container">
             <div class="hero-layout">
@@ -100,9 +107,13 @@
                 </div>
                 <div class="hero-image reveal-right">
                     <div class="avatar-ring">
-                        <img src="images/francis-nyantakyi-software-developer.jpg"
-                            alt="Francis Nyantakyi, software developer and educator based in Ghana"
-                            class="avatar-img" />
+                        <picture>
+                            <source srcset="images/francis-nyantakyi-software-developer.avif" type="image/avif" />
+                            <source srcset="images/francis-nyantakyi-software-developer.webp" type="image/webp" />
+                            <img src="images/francis-nyantakyi-software-developer.jpg"
+                                alt="Francis Nyantakyi, software developer and educator based in Ghana"
+                                class="avatar-img" width="260" height="260" />
+                        </picture>
                     </div>
                     <p class="hero-badge">
                         <i data-lucide="map-pin" class="icon-xs" aria-hidden="true"></i>
@@ -234,9 +245,44 @@
                     inflating results.</p>
             </div>
 
+            <div class="projects-featured reveal-up" aria-label="Featured projects">
+                <p class="featured-label">Featured</p>
+                <div class="featured-grid">
+                    <a class="featured-card" href="#project-student-performance" aria-label="Jump to Student Performance Analytics Dashboard">
+                        <p class="featured-kicker">Data • Dashboard</p>
+                        <h3 class="featured-title">Student Performance Analytics Dashboard</h3>
+                        <p class="featured-copy">A visual reporting flow that helps educators interpret results faster.</p>
+                    </a>
+                    <a class="featured-card" href="#project-marvelous-touch" aria-label="Jump to Marvelous Touch Foundation">
+                        <p class="featured-kicker">NGO • Web</p>
+                        <h3 class="featured-title">Marvelous Touch Foundation</h3>
+                        <p class="featured-copy">A responsive nonprofit site built for clarity, trust, and mobile access.</p>
+                    </a>
+                    <a class="featured-card" href="#project-secureguard" aria-label="Jump to SecureGuard File Encryption Tool">
+                        <p class="featured-kicker">Desktop • Crypto</p>
+                        <h3 class="featured-title">SecureGuard File Encryption Tool</h3>
+                        <p class="featured-copy">AES‑256 file encryption with a clean, user-friendly desktop workflow.</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="projects-toolbar reveal-up" style="--delay:0.06s">
+                <div class="filter-group" role="group" aria-label="Filter projects by category">
+                    <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">All</button>
+                    <button type="button" class="filter-btn" data-filter="web" aria-pressed="false">Web</button>
+                    <button type="button" class="filter-btn" data-filter="data" aria-pressed="false">Data</button>
+                    <button type="button" class="filter-btn" data-filter="desktop" aria-pressed="false">Desktop</button>
+                    <button type="button" class="filter-btn" data-filter="ngo" aria-pressed="false">NGO</button>
+                </div>
+                <p class="filter-meta" aria-live="polite"><span id="project-count">0</span> projects shown</p>
+            </div>
+
             <div class="projects-list" role="list">
-                <article class="project-item reveal-up" role="listitem">
+                <article class="project-item reveal-up" role="listitem" id="project-student-performance" data-cats="web data" data-title="Student Performance Analytics Dashboard">
                     <div class="project-meta">
+                        <div class="project-thumb" aria-hidden="true">
+                            <i data-lucide="bar-chart-3"></i>
+                        </div>
                         <span class="project-num">01</span>
                         <span class="project-tag">Education Analytics &bull; Dashboard</span>
                     </div>
@@ -267,8 +313,11 @@
                     </div>
                 </article>
 
-                <article class="project-item reveal-up" role="listitem">
+                <article class="project-item reveal-up" role="listitem" id="project-math-quiz" data-cats="web" data-title="Math Quiz Portal">
                     <div class="project-meta">
+                        <div class="project-thumb" aria-hidden="true">
+                            <i data-lucide="calculator"></i>
+                        </div>
                         <span class="project-num">02</span>
                         <span class="project-tag">Education &bull; Interactive</span>
                     </div>
@@ -298,8 +347,11 @@
                     </div>
                 </article>
 
-                <article class="project-item reveal-up" role="listitem">
+                <article class="project-item reveal-up" role="listitem" id="project-data-insights" data-cats="web data" data-title="Data Insights Web App">
                     <div class="project-meta">
+                        <div class="project-thumb" aria-hidden="true">
+                            <i data-lucide="line-chart"></i>
+                        </div>
                         <span class="project-num">03</span>
                         <span class="project-tag tag-wip">In Development</span>
                     </div>
@@ -326,8 +378,11 @@
                     </div>
                 </article>
 
-                <article class="project-item reveal-up" role="listitem">
+                <article class="project-item reveal-up" role="listitem" id="project-marvelous-touch" data-cats="web ngo" data-title="Marvelous Touch Foundation">
                     <div class="project-meta">
+                        <div class="project-thumb" aria-hidden="true">
+                            <i data-lucide="heart-handshake"></i>
+                        </div>
                         <span class="project-num">04</span>
                         <span class="project-tag">Non-Profit &bull; Responsive</span>
                     </div>
@@ -356,8 +411,11 @@
                     </div>
                 </article>
 
-                <article class="project-item reveal-up" role="listitem">
+                <article class="project-item reveal-up" role="listitem" id="project-geosphere" data-cats="web" data-title="GeoSphere">
                     <div class="project-meta">
+                        <div class="project-thumb" aria-hidden="true">
+                            <i data-lucide="globe"></i>
+                        </div>
                         <span class="project-num">05</span>
                         <span class="project-tag">API Integration &bull; JavaScript</span>
                     </div>
@@ -387,8 +445,11 @@
                     </div>
                 </article>
 
-                <article class="project-item reveal-up" role="listitem">
+                <article class="project-item reveal-up" role="listitem" id="project-stories" data-cats="web" data-title="Stories">
                     <div class="project-meta">
+                        <div class="project-thumb" aria-hidden="true">
+                            <i data-lucide="book-open"></i>
+                        </div>
                         <span class="project-num">06</span>
                         <span class="project-tag">JSON &bull; Data Management</span>
                     </div>
@@ -416,8 +477,11 @@
                     </div>
                 </article>
 
-                <article class="project-item reveal-up" role="listitem">
+                <article class="project-item reveal-up" role="listitem" id="project-royal-hall" data-cats="web" data-title="Royal Hall">
                     <div class="project-meta">
+                        <div class="project-thumb" aria-hidden="true">
+                            <i data-lucide="building-2"></i>
+                        </div>
                         <span class="project-num">07</span>
                         <span class="project-tag">Full Stack &bull; Admin Workflows</span>
                     </div>
@@ -444,8 +508,11 @@
                     </div>
                 </article>
 
-                <article class="project-item reveal-up" role="listitem">
+                <article class="project-item reveal-up" role="listitem" id="project-prestige-drinks" data-cats="web" data-title="Prestige Drinks">
                     <div class="project-meta">
+                        <div class="project-thumb" aria-hidden="true">
+                            <i data-lucide="shopping-bag"></i>
+                        </div>
                         <span class="project-num">08</span>
                         <span class="project-tag">Store Management &bull; Reporting</span>
                     </div>
@@ -469,6 +536,43 @@
                             class="project-link" aria-label="View Prestige Drinks repository, opens in new tab">
                             View App <i data-lucide="arrow-up-right" class="icon-sm" aria-hidden="true"></i>
                         </a>
+                    </div>
+                </article>
+
+                <article class="project-item reveal-up" role="listitem" id="project-secureguard" data-cats="desktop" data-title="SecureGuard File Encryption Tool">
+                    <div class="project-meta">
+                        <div class="project-thumb" aria-hidden="true">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+                        <span class="project-num">09</span>
+                        <span class="project-tag">Cryptography &bull; Desktop App</span>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-name">SecureGuard File Encryption Tool</h3>
+                        <p class="project-desc">A lightweight desktop file-encryption utility built in C# with a clean
+                            Object-Oriented architecture. SecureGuard encrypts and decrypts files using AES-256, producing
+                            password-protected <code>.locked</code> files with robust file I/O and clear UI feedback.</p>
+                        <ul class="project-highlights" aria-label="SecureGuard File Encryption Tool case study highlights">
+                            <li><strong>Problem:</strong> Users need a simple, trustworthy workflow to protect sensitive files with password-based encryption.</li>
+                            <li><strong>Approach:</strong> I built a cross-platform Avalonia UI app with a separated crypto core (AES-256 + SHA-256 key derivation) and chunked streaming I/O for large files.</li>
+                            <li><strong>Impact:</strong> The project demonstrates end-to-end desktop engineering: event-driven UI, async file processing, and clean abstractions that keep cryptography isolated from the interface.</li>
+                        </ul>
+                        <p class="project-note"><span>Key features:</span> drag-and-drop selection, progress tracking, password strength indicator,
+                            output folder control, overwrite protection, and timestamp preservation.</p>
+                        <div class="project-stack" aria-label="SecureGuard File Encryption Tool technology stack">
+                            <span class="stack-chip">C#</span>
+                            <span class="stack-chip">.NET</span>
+                            <span class="stack-chip">Avalonia UI</span>
+                            <span class="stack-chip">AES-256</span>
+                            <span class="stack-chip">System.Security.Cryptography</span>
+                        </div>
+                        <div class="project-links" aria-label="SecureGuard links">
+                            <a href="https://github.com/Nyantakyi-Francis/SecureGuard-File-Encryption-Tool" target="_blank" rel="noopener"
+                                class="project-link" aria-label="View SecureGuard File Encryption Tool repository, opens in new tab">
+                                View Repository <i data-lucide="arrow-up-right" class="icon-sm" aria-hidden="true"></i>
+                            </a>
+                            
+                        </div>
                     </div>
                 </article>
             </div>
@@ -587,6 +691,8 @@
         </div>
     </section>
 
+    </main>
+
     <footer class="footer">
         <div class="container footer-inner">
             <p class="footer-copy">&copy; <span id="footer-year"></span> Nyantakyi Francis. Designed &amp; built with
@@ -611,7 +717,7 @@
         <i data-lucide="arrow-up" aria-hidden="true"></i>
     </button>
 
-    <script src="js/scripts.js"></script>
+    <script defer src="js/scripts.js"></script>
 </body>
 
 </html>
