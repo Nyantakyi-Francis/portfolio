@@ -13,6 +13,7 @@
 
   const nav = document.getElementById('nav');
   const backTop = document.getElementById('back-top');
+  const hero = document.querySelector('.hero');
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-link');
   const burger = document.getElementById('nav-burger');
@@ -209,6 +210,20 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
+  if (hero) {
+    function onHeroScroll() {
+      if (prefersReducedMotion) {
+        return;
+      }
+      const progress = Math.min(1, Math.max(0, window.scrollY / 900));
+      hero.style.setProperty('--hero-s', String(1 + progress * 0.03));
+      hero.style.setProperty('--hero-y', `${progress * 8}px`);
+    }
+
+    window.addEventListener('scroll', onHeroScroll, { passive: true });
+    onHeroScroll();
+  }
+
   if (backTop) {
     backTop.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
@@ -258,5 +273,14 @@
         });
       }, { passive: true });
     }
+  }
+
+  if (hero && !prefersReducedMotion && hasFinePointer) {
+    window.addEventListener('mousemove', (event) => {
+      const x = (event.clientX / window.innerWidth - 0.5) * 16;
+      const y = (event.clientY / window.innerHeight - 0.5) * 12;
+      hero.style.setProperty('--hero-x', `${x}px`);
+      hero.style.setProperty('--hero-y', `${y}px`);
+    }, { passive: true });
   }
 });
