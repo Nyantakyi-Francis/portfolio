@@ -16,16 +16,24 @@
     <meta property="og:title" content="Francis Nyantakyi - Full-Stack Developer" />
     <meta property="og:description"
         content="Building React/Next.js frontends, Node/Nest APIs, and database-backed products shaped by software engineering and pedagogy." />
-    <meta property="og:image" content="https://nyantakyi-francis.github.io/portfolio/images/social_share_image.png" />
+    <meta property="og:image"
+        content="https://nyantakyi-francis.github.io/portfolio/images/francis-nyantakyi-software-developer.jpg" />
     <meta property="og:url" content="https://nyantakyi-francis.github.io/portfolio/" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Francis Nyantakyi - Full-Stack Developer" />
+    <meta name="twitter:description"
+        content="Full-stack projects for education, analytics, business operations, and social impact." />
+    <meta name="twitter:image"
+        content="https://nyantakyi-francis.github.io/portfolio/images/francis-nyantakyi-software-developer.jpg" />
     <script
-        type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Francis Nyantakyi","url":"https://nyantakyi-francis.github.io/portfolio/","jobTitle":"Full-Stack Developer","description":"Full-stack developer and educator building React/Next.js frontends, Node/Nest APIs, and database-backed products for education, analytics, and social impact.","alumniOf":[{"@type":"CollegeOrUniversity","name":"Brigham Young University-Idaho"},{"@type":"CollegeOrUniversity","name":"Mampong Technical College of Education"}]}</script>
+        type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Francis Nyantakyi","url":"https://nyantakyi-francis.github.io/portfolio/","jobTitle":"Full-Stack Developer","description":"Full-stack developer and educator building data-backed products for education, analytics, business operations, and social impact.","alumniOf":[{"@type":"CollegeOrUniversity","name":"Brigham Young University-Idaho"},{"@type":"CollegeOrUniversity","name":"Mampong Technical College of Education"}],"hasCredential":[{"@type":"EducationalOccupationalCredential","name":"Web Development Certificate","credentialCategory":"Certificate","recognizedBy":{"@type":"CollegeOrUniversity","name":"Brigham Young University-Idaho"}},{"@type":"EducationalOccupationalCredential","name":"Web & Computer Programming Certificate","credentialCategory":"Certificate","recognizedBy":{"@type":"CollegeOrUniversity","name":"Brigham Young University-Idaho"}}]}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@400;500&display=swap"
         rel="stylesheet" />
-    <script defer src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="css/styles.css" />
@@ -67,7 +75,7 @@
                     </a>
                 </li>
             </ul>
-            <button class="nav-burger" id="nav-burger" aria-label="Open navigation menu" aria-expanded="false"
+            <button type="button" class="nav-burger" id="nav-burger" aria-label="Open navigation menu" aria-expanded="false"
                 aria-controls="nav-links">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
@@ -77,25 +85,23 @@
     </nav>
 
     <main id="main" tabindex="-1">
-    <section class="hero" id="home" aria-labelledby="hero-heading"
-        style="--hero-img:url('https://picsum.photos/id/1018/1600/1100');">
+    <section class="hero" id="home" aria-labelledby="hero-heading">
         <div class="container">
             <div class="hero-layout">
                 <div class="hero-text">
-                    <p class="hero-eyebrow reveal-up">Full-Stack Developer &bull; React/Next.js &bull; Node/Express/Nest</p>
+                    <p class="hero-eyebrow reveal-up">Full-Stack Developer &bull; Educator &bull; Data-Focused Builder</p>
                     <h1 class="hero-name reveal-up" id="hero-heading">
                         Nyantakyi<br /><em>Francis</em>
                     </h1>
                     <p class="hero-bio reveal-up">
-                        I build <strong>production-ready web apps end-to-end</strong>: beautiful frontends, reliable
-                        backend APIs, and database-backed workflows. With training in both
-                        <strong>computer science</strong> and <strong>education</strong>, I ship products for learning,
-                        analytics, and real communities where clarity, performance, and trust matter.
+                        I build practical, database-backed products for <strong>education, analytics, business
+                            operations, and social impact</strong>. My background in software development and teaching
+                        helps me turn complex workflows into interfaces people can understand and use confidently.
                     </p>
                     <div class="hero-proof reveal-up" aria-label="Quick profile highlights">
-                        <span class="proof-pill">Full-stack: React/Next.js frontends + Node/Express/Nest APIs</span>
-                        <span class="proof-pill">Data: Postgres/MySQL + MongoDB &bull; auth &bull; role-based workflows</span>
-                        <span class="proof-pill">Delivery: Docker &bull; CI/CD &bull; secure deployments</span>
+                        <span class="proof-pill">Next.js + React applications</span>
+                        <span class="proof-pill">Supabase Auth + PostgreSQL workflows</span>
+                        <span class="proof-pill">Education and analytics product design</span>
                     </div>
                     <div class="hero-actions reveal-up">
                         <a href="#projects" class="btn btn-primary">
@@ -120,33 +126,28 @@
                         <i data-lucide="map-pin" class="icon-xs" aria-hidden="true"></i>
                         <span>Ghana, West Africa</span>
                     </p>
-                    <div class="hero-note">
-                        <strong>Positioning:</strong> Full-stack developer building for classrooms, nonprofits, and
-                        data-informed teams.
-                    </div>
                 </div>
             </div>
 
             <dl class="stats-row" aria-label="Key highlights">
                 <div class="stat reveal-up">
-                    <dt class="stat-label">Featured Builds</dt>
-                    <dd><span class="stat-num" data-target="6">0</span><span class="stat-unit"
-                            aria-hidden="true">+</span></dd>
+                    <dt class="stat-label">Portfolio Projects</dt>
+                    <dd><span class="stat-num" data-target="9">0</span></dd>
                 </div>
                 <div class="stat-divider" aria-hidden="true"></div>
                 <div class="stat reveal-up">
-                    <dt class="stat-label">Degrees in Progress</dt>
+                    <dt class="stat-label">BYU-I Certificates</dt>
                     <dd><span class="stat-num" data-target="2">0</span></dd>
                 </div>
                 <div class="stat-divider" aria-hidden="true"></div>
                 <div class="stat reveal-up">
-                    <dt class="stat-label">Core Focus Areas</dt>
-                    <dd><span class="stat-num" data-target="3">0</span></dd>
+                    <dt class="stat-label">Professional Disciplines</dt>
+                    <dd><span class="stat-num" data-target="2">0</span></dd>
                 </div>
                 <div class="stat-divider" aria-hidden="true"></div>
                 <div class="stat reveal-up">
-                    <dt class="stat-label">Positioning</dt>
-                    <dd><span class="stat-num stat-num-text">Full-Stack</span></dd>
+                    <dt class="stat-label">Location</dt>
+                    <dd><span class="stat-num stat-num-text">Ghana</span></dd>
                 </div>
             </dl>
         </div>
@@ -183,10 +184,10 @@
                             <i data-lucide="download" class="icon-sm" aria-hidden="true"></i>
                             Download Resume <span class="sr-only">(PDF)</span>
                         </a>
-                        <a href="2033319_eDiploma%20BYU.pdf" target="_blank" rel="noopener" class="btn btn-ghost"
-                            aria-label="View BYU eDiploma, PDF file, opens in new tab">
+                        <a href="9192311_eDiploma.pdf" target="_blank" rel="noopener" class="btn btn-ghost"
+                            aria-label="View Web Development Certificate, PDF file, opens in new tab">
                             <i data-lucide="graduation-cap" class="icon-sm" aria-hidden="true"></i>
-                            View BYU eDiploma <span class="sr-only">(PDF)</span>
+                            Latest Certificate <span class="sr-only">(PDF)</span>
                         </a>
                     </div>
                 </div>
@@ -197,11 +198,6 @@
                             <h3 class="edu-degree">B.Sc. Web &amp; Computer Programming</h3>
                             <p class="edu-school">Brigham Young University-Idaho</p>
                             <p class="edu-detail">Frontend engineering &bull; Web systems &bull; Data products</p>
-                            <a href="2033319_eDiploma_BYU.pdf" target="_blank" rel="noopener" class="edu-link"
-                                aria-label="Open Brigham Young University-Idaho eDiploma, PDF file, opens in new tab">
-                                <i data-lucide="file-text" class="icon-sm" aria-hidden="true"></i>
-                                <span>Open verified eDiploma</span>
-                            </a>
                         </div>
                     </div>
                     <div class="edu-card reveal-right" style="--delay:0.1s">
@@ -245,24 +241,62 @@
                     Where I do not yet have published usage metrics, I describe the impact honestly rather than
                     inflating results.</p>
             </div>
+            <div class="credentials-block reveal-up">
+                <div class="credentials-heading">
+                    <p class="section-eyebrow">Verified Credentials</p>
+                    <h3>Professional certificates</h3>
+                </div>
+                <div class="credentials-grid">
+                    <article class="credential-card">
+                        <div class="credential-icon" aria-hidden="true"><i data-lucide="badge-check"></i></div>
+                        <div>
+                            <p class="credential-date">Completed April 18, 2026</p>
+                            <h3>Web Development Certificate</h3>
+                            <p>Brigham Young University-Idaho</p>
+                            <p class="credential-detail">Full-stack applications, relational databases, backend
+                                functionality, and deployed web services.</p>
+                            <a href="9192311_eDiploma.pdf" target="_blank" rel="noopener" class="edu-link"
+                                aria-label="Open Web Development Certificate, PDF file, opens in new tab">
+                                <i data-lucide="external-link" class="icon-sm" aria-hidden="true"></i>
+                                <span>View verified certificate</span>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="credential-card">
+                        <div class="credential-icon" aria-hidden="true"><i data-lucide="badge-check"></i></div>
+                        <div>
+                            <p class="credential-date">Completed August 16, 2025</p>
+                            <h3>Web &amp; Computer Programming Certificate</h3>
+                            <p>Brigham Young University-Idaho</p>
+                            <p class="credential-detail">Programming, responsive web design, dynamic pages, and
+                                standards-based frontend development.</p>
+                            <a href="2033319_eDiploma_BYU.pdf" target="_blank" rel="noopener" class="edu-link"
+                                aria-label="Open Web and Computer Programming Certificate, PDF file, opens in new tab">
+                                <i data-lucide="external-link" class="icon-sm" aria-hidden="true"></i>
+                                <span>View verified certificate</span>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
 
             <div class="projects-featured reveal-up" aria-label="Featured projects">
                 <p class="featured-label">Featured</p>
                 <div class="featured-grid">
                     <a class="featured-card" href="#project-royal-hall" aria-label="Jump to Royal Hall"
-                        style="--featured-img:url('https://picsum.photos/id/1043/900/700');">
+                        style="--featured-img:url('images/projects/royal-hall.webp');">
                         <p class="featured-kicker">Full-Stack • Admin</p>
                         <h3 class="featured-title">Royal Hall</h3>
                         <p class="featured-copy">Auth, roles, and database-backed workflows for allocation requests.</p>
                     </a>
                     <a class="featured-card" href="#project-student-performance" aria-label="Jump to Student Performance Analytics Dashboard"
-                        style="--featured-img:url('https://picsum.photos/id/1067/900/700');">
+                        style="--featured-img:url('images/projects/student-performance.webp');">
                         <p class="featured-kicker">Data • Dashboard</p>
                         <h3 class="featured-title">Student Performance Analytics Dashboard</h3>
                         <p class="featured-copy">A visual reporting flow that helps educators interpret results faster.</p>
                     </a>
                     <a class="featured-card" href="#project-prestige-drinks" aria-label="Jump to Prestige Drinks"
-                        style="--featured-img:url('https://picsum.photos/id/1036/900/700');">
+                        style="--featured-img:url('images/projects/prestige-drinks.webp');">
                         <p class="featured-kicker">Full-Stack • Inventory</p>
                         <h3 class="featured-title">Prestige Drinks</h3>
                         <p class="featured-copy">Role-aware inventory, sales workflows, and reporting dashboards.</p>
@@ -270,25 +304,14 @@
                 </div>
             </div>
 
-            <div class="projects-toolbar reveal-up" style="--delay:0.06s">
-                <div class="filter-group" role="group" aria-label="Filter projects by category">
-                    <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">All</button>
-                    <button type="button" class="filter-btn" data-filter="web" aria-pressed="false">Web</button>
-                    <button type="button" class="filter-btn" data-filter="fullstack" aria-pressed="false">Full-Stack</button>
-                    <button type="button" class="filter-btn" data-filter="data" aria-pressed="false">Data</button>
-                    <button type="button" class="filter-btn" data-filter="desktop" aria-pressed="false">Desktop</button>
-                    <button type="button" class="filter-btn" data-filter="ngo" aria-pressed="false">NGO</button>
-                </div>
-                <p class="filter-meta" aria-live="polite"><span id="project-count">0</span> projects shown</p>
-            </div>
-
             <div class="projects-list" role="list">
-                <article class="project-item reveal-up" role="listitem" id="project-student-performance" data-cats="web data" data-title="Student Performance Analytics Dashboard"
-                    style="--project-img:url('https://picsum.photos/id/1050/1400/900');">
+                <article class="project-item project-item--case-study reveal-up" role="listitem"
+                    id="project-student-performance" data-cats="web data"
+                    data-title="Student Performance Analytics Dashboard">
                     <div class="project-meta">
-                        <div class="project-thumb" aria-hidden="true">
-                            <i data-lucide="bar-chart-3"></i>
-                        </div>
+                        <img class="project-screenshot" src="images/projects/student-performance.webp"
+                            alt="Student Performance Analytics Dashboard showing student data management controls"
+                            width="1440" height="900" loading="lazy" />
                         <span class="project-num">01</span>
                         <span class="project-tag">Education Analytics &bull; Dashboard</span>
                     </div>
@@ -311,20 +334,27 @@
                             <span class="stack-chip">Education Analytics</span>
                             <span class="stack-chip">Dashboard UI</span>
                         </div>
-                        <a href="https://student-performance-dashboard-three.vercel.app/" target="_blank" rel="noopener"
-                            class="project-link"
-                            aria-label="View Student Performance Analytics Dashboard, opens in new tab">
-                            View Live Demo <i data-lucide="arrow-up-right" class="icon-sm" aria-hidden="true"></i>
-                        </a>
+                        <div class="project-links">
+                            <a href="https://student-performance-dashboard-three.vercel.app/" target="_blank"
+                                rel="noopener" class="project-link"
+                                aria-label="View Student Performance Analytics Dashboard, opens in new tab">
+                                Live Demo <i data-lucide="arrow-up-right" class="icon-sm" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://github.com/Nyantakyi-Francis/student-performance-dashboard" target="_blank"
+                                rel="noopener" class="project-link"
+                                aria-label="View Student Performance Analytics Dashboard source code, opens in new tab">
+                                Source Code <i data-lucide="github" class="icon-sm" aria-hidden="true"></i>
+                            </a>
+                        </div>
                     </div>
                 </article>
 
-                <article class="project-item reveal-up" role="listitem" id="project-math-quiz" data-cats="web" data-title="Math Quiz Portal"
-                    style="--project-img:url('https://picsum.photos/id/1060/1400/900');">
+                <article class="project-item project-item--case-study reveal-up" role="listitem" id="project-math-quiz"
+                    data-cats="web fullstack" data-title="Math Quiz Portal">
                     <div class="project-meta">
-                        <div class="project-thumb" aria-hidden="true">
-                            <i data-lucide="calculator"></i>
-                        </div>
+                        <img class="project-screenshot" src="images/projects/math-quiz.webp"
+                            alt="Math Quiz Portal landing page with account controls and learning statistics"
+                            width="1440" height="900" loading="lazy" />
                         <span class="project-num">02</span>
                         <span class="project-tag">Education &bull; Interactive</span>
                     </div>
@@ -340,27 +370,39 @@
                         <p class="project-note"><span>Challenge solved:</span> balancing rigorous practice with a simple,
                             low-friction experience learners can use independently.</p>
                         <div class="project-stack" aria-label="Math Quiz Portal technology stack">
-                            <span class="stack-chip">HTML</span>
-                            <span class="stack-chip">CSS</span>
-                            <span class="stack-chip">JavaScript</span>
-                            <span class="stack-chip">Education UX</span>
-                            <span class="stack-chip">Interactive Quiz Flow</span>
+                            <span class="stack-chip">Next.js</span>
+                            <span class="stack-chip">TypeScript</span>
+                            <span class="stack-chip">Supabase</span>
+                            <span class="stack-chip">Role-Based Access</span>
+                            <span class="stack-chip">Vitest</span>
                         </div>
-                        <a href="https://math-quiz-portal-j83k.vercel.app/" target="_blank"
-                            rel="noopener" class="project-link"
-                            aria-label="View Math Quiz Portal project, opens in new tab">
-                            View Live Demo <i data-lucide="arrow-up-right" class="icon-sm" aria-hidden="true"></i>
-                        </a>
+                        <div class="project-links">
+                            <a href="https://math-quiz-portal-j83k.vercel.app/" target="_blank"
+                                rel="noopener" class="project-link"
+                                aria-label="View Math Quiz Portal project, opens in new tab">
+                                Live Demo <i data-lucide="arrow-up-right" class="icon-sm" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://github.com/Nyantakyi-Francis/math-quiz-portal" target="_blank"
+                                rel="noopener" class="project-link"
+                                aria-label="View Math Quiz Portal source code, opens in new tab">
+                                Source Code <i data-lucide="github" class="icon-sm" aria-hidden="true"></i>
+                            </a>
+                        </div>
                     </div>
                 </article>
 
-                <article class="project-item reveal-up" role="listitem" id="project-data-insights" data-cats="web data" data-title="Data Insights Web App"
-                    style="--project-img:url('https://picsum.photos/id/1015/1400/900');">
+                <div class="more-projects-heading reveal-up" role="presentation">
+                    <p class="section-eyebrow">More Work</p>
+                    <h3>Additional projects and experiments</h3>
+                </div>
+
+                <article class="project-item project-item--compact reveal-up" role="listitem" id="project-data-insights"
+                    data-cats="web data" data-title="Data Insights Web App">
                     <div class="project-meta">
                         <div class="project-thumb" aria-hidden="true">
                             <i data-lucide="line-chart"></i>
                         </div>
-                        <span class="project-num">03</span>
+                        <span class="project-num">05</span>
                         <span class="project-tag tag-wip">In Development</span>
                     </div>
                     <div class="project-body">
@@ -381,18 +423,21 @@
                             <span class="stack-chip">Storytelling</span>
                             <span class="stack-chip">In Progress</span>
                         </div>
-                        <p class="project-link project-link--disabled"><i data-lucide="clock" class="icon-sm"
-                                aria-hidden="true"></i> Live preview coming after the next build milestone</p>
+                        <a href="https://github.com/Nyantakyi-Francis/Data-Insights-Web-App" target="_blank"
+                            rel="noopener" class="project-link"
+                            aria-label="View Data Insights Web App repository, opens in new tab">
+                            View Repository <i data-lucide="github" class="icon-sm" aria-hidden="true"></i>
+                        </a>
                     </div>
                 </article>
 
-                <article class="project-item reveal-up" role="listitem" id="project-marvelous-touch" data-cats="web ngo" data-title="Marvelous Touch Foundation"
-                    style="--project-img:url('https://picsum.photos/id/1025/1400/900');">
+                <article class="project-item project-item--compact reveal-up" role="listitem"
+                    id="project-marvelous-touch" data-cats="web ngo" data-title="Marvelous Touch Foundation">
                     <div class="project-meta">
                         <div class="project-thumb" aria-hidden="true">
                             <i data-lucide="heart-handshake"></i>
                         </div>
-                        <span class="project-num">04</span>
+                        <span class="project-num">06</span>
                         <span class="project-tag">Non-Profit &bull; Responsive</span>
                     </div>
                     <div class="project-body">
@@ -413,20 +458,28 @@
                             <span class="stack-chip">Non-Profit Web</span>
                             <span class="stack-chip">Mobile Accessibility</span>
                         </div>
-                        <a href="https://marveloustouchfoundation.com/" target="_blank" rel="noopener" class="project-link"
-                            aria-label="View Marvelous Touch Foundation website, opens in new tab">
-                            View Live Site <i data-lucide="arrow-up-right" class="icon-sm" aria-hidden="true"></i>
-                        </a>
+                        <div class="project-links">
+                            <a href="https://marveloustouchfoundation.com/" target="_blank" rel="noopener"
+                                class="project-link"
+                                aria-label="View Marvelous Touch Foundation website, opens in new tab">
+                                Live Site <i data-lucide="arrow-up-right" class="icon-sm" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://github.com/Nyantakyi-Francis/MARVELOUS-TOUCH" target="_blank"
+                                rel="noopener" class="project-link"
+                                aria-label="View Marvelous Touch Foundation source code, opens in new tab">
+                                Source Code <i data-lucide="github" class="icon-sm" aria-hidden="true"></i>
+                            </a>
+                        </div>
                     </div>
                 </article>
 
-                <article class="project-item reveal-up" role="listitem" id="project-geosphere" data-cats="web" data-title="GeoSphere"
-                    style="--project-img:url('https://picsum.photos/id/1016/1400/900');">
+                <article class="project-item project-item--compact reveal-up" role="listitem" id="project-geosphere"
+                    data-cats="web" data-title="GeoSphere">
                     <div class="project-meta">
                         <div class="project-thumb" aria-hidden="true">
                             <i data-lucide="globe"></i>
                         </div>
-                        <span class="project-num">05</span>
+                        <span class="project-num">07</span>
                         <span class="project-tag">API Integration &bull; JavaScript</span>
                     </div>
                     <div class="project-body">
@@ -448,20 +501,26 @@
                             <span class="stack-chip">Interactive UI</span>
                             <span class="stack-chip">API Orchestration</span>
                         </div>
-                        <a href="https://geosphere-ruby.vercel.app/" target="_blank" rel="noopener"
-                            class="project-link" aria-label="View GeoSphere project, opens in new tab">
-                            View Project <i data-lucide="arrow-up-right" class="icon-sm" aria-hidden="true"></i>
-                        </a>
+                        <div class="project-links">
+                            <a href="https://geosphere-ruby.vercel.app/" target="_blank" rel="noopener"
+                                class="project-link" aria-label="View GeoSphere project, opens in new tab">
+                                Live Demo <i data-lucide="arrow-up-right" class="icon-sm" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://github.com/Nyantakyi-Francis/GeoSphere" target="_blank" rel="noopener"
+                                class="project-link" aria-label="View GeoSphere source code, opens in new tab">
+                                Source Code <i data-lucide="github" class="icon-sm" aria-hidden="true"></i>
+                            </a>
+                        </div>
                     </div>
                 </article>
 
-                <article class="project-item reveal-up" role="listitem" id="project-stories" data-cats="web" data-title="Stories"
-                    style="--project-img:url('https://picsum.photos/id/24/1400/900');">
+                <article class="project-item project-item--compact reveal-up" role="listitem" id="project-stories"
+                    data-cats="web" data-title="Stories">
                     <div class="project-meta">
                         <div class="project-thumb" aria-hidden="true">
                             <i data-lucide="book-open"></i>
                         </div>
-                        <span class="project-num">06</span>
+                        <span class="project-num">08</span>
                         <span class="project-tag">JSON &bull; Data Management</span>
                     </div>
                     <div class="project-body">
@@ -481,20 +540,26 @@
                             <span class="stack-chip">Content Platform</span>
                             <span class="stack-chip">Client-Side Rendering</span>
                         </div>
-                        <a href="https://nyantakyi-francis.github.io/Stories/" target="_blank" rel="noopener"
-                            class="project-link" aria-label="View Stories project, opens in new tab">
-                            View Project <i data-lucide="arrow-up-right" class="icon-sm" aria-hidden="true"></i>
-                        </a>
+                        <div class="project-links">
+                            <a href="https://nyantakyi-francis.github.io/Stories/" target="_blank" rel="noopener"
+                                class="project-link" aria-label="View Stories project, opens in new tab">
+                                Live Demo <i data-lucide="arrow-up-right" class="icon-sm" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://github.com/Nyantakyi-Francis/Stories" target="_blank" rel="noopener"
+                                class="project-link" aria-label="View Stories source code, opens in new tab">
+                                Source Code <i data-lucide="github" class="icon-sm" aria-hidden="true"></i>
+                            </a>
+                        </div>
                     </div>
                 </article>
 
-                <article class="project-item reveal-up" role="listitem" id="project-royal-hall" data-cats="web fullstack" data-title="Royal Hall"
-                    style="--project-img:url('https://picsum.photos/id/1048/1400/900');">
+                <article class="project-item project-item--case-study reveal-up" role="listitem"
+                    id="project-royal-hall" data-cats="web fullstack" data-title="Royal Hall">
                     <div class="project-meta">
-                        <div class="project-thumb" aria-hidden="true">
-                            <i data-lucide="building-2"></i>
-                        </div>
-                        <span class="project-num">07</span>
+                        <img class="project-screenshot" src="images/projects/royal-hall.webp"
+                            alt="Royal Hall room allocation application landing page" width="1440" height="900"
+                            loading="lazy" />
+                        <span class="project-num">03</span>
                         <span class="project-tag">Full Stack &bull; Admin Workflows</span>
                     </div>
                     <div class="project-body">
@@ -513,20 +578,25 @@
                             <span class="stack-chip">Tailwind CSS</span>
                             <span class="stack-chip">RLS</span>
                         </div>
-                        <a href="https://royal-hall-cyan.vercel.app/" target="_blank" rel="noopener"
-                            class="project-link" aria-label="View Royal Hall repository, opens in new tab">
-                            View App <i data-lucide="arrow-up-right" class="icon-sm" aria-hidden="true"></i>
-                        </a>
+                        <div class="project-links">
+                            <a href="https://royal-hall-cyan.vercel.app/" target="_blank" rel="noopener"
+                                class="project-link" aria-label="View Royal Hall application, opens in new tab">
+                                Live Demo <i data-lucide="arrow-up-right" class="icon-sm" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://github.com/Nyantakyi-Francis/royal-hall" target="_blank" rel="noopener"
+                                class="project-link" aria-label="View Royal Hall source code, opens in new tab">
+                                Source Code <i data-lucide="github" class="icon-sm" aria-hidden="true"></i>
+                            </a>
+                        </div>
                     </div>
                 </article>
 
-                <article class="project-item reveal-up" role="listitem" id="project-prestige-drinks" data-cats="web fullstack" data-title="Prestige Drinks"
-                    style="--project-img:url('https://picsum.photos/id/1084/1400/900');">
+                <article class="project-item project-item--case-study reveal-up" role="listitem"
+                    id="project-prestige-drinks" data-cats="web fullstack" data-title="Prestige Drinks">
                     <div class="project-meta">
-                        <div class="project-thumb" aria-hidden="true">
-                            <i data-lucide="shopping-bag"></i>
-                        </div>
-                        <span class="project-num">08</span>
+                        <img class="project-screenshot" src="images/projects/prestige-drinks.webp"
+                            alt="Prestige Drinks authentication screen" width="1440" height="900" loading="lazy" />
+                        <span class="project-num">04</span>
                         <span class="project-tag">Store Management &bull; Reporting</span>
                     </div>
                     <div class="project-body">
@@ -545,15 +615,22 @@
                             <span class="stack-chip">Tailwind CSS</span>
                             <span class="stack-chip">Reporting</span>
                         </div>
-                        <a href="https://prestige-drinks.vercel.app/" target="_blank" rel="noopener"
-                            class="project-link" aria-label="View Prestige Drinks repository, opens in new tab">
-                            View App <i data-lucide="arrow-up-right" class="icon-sm" aria-hidden="true"></i>
-                        </a>
+                        <div class="project-links">
+                            <a href="https://prestige-drinks.vercel.app/" target="_blank" rel="noopener"
+                                class="project-link" aria-label="View Prestige Drinks application, opens in new tab">
+                                Live Demo <i data-lucide="arrow-up-right" class="icon-sm" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://github.com/Nyantakyi-Francis/prestige-drinks" target="_blank"
+                                rel="noopener" class="project-link"
+                                aria-label="View Prestige Drinks source code, opens in new tab">
+                                Source Code <i data-lucide="github" class="icon-sm" aria-hidden="true"></i>
+                            </a>
+                        </div>
                     </div>
                 </article>
 
-                <article class="project-item reveal-up" role="listitem" id="project-secureguard" data-cats="desktop" data-title="SecureGuard File Encryption Tool"
-                    style="--project-img:url('https://picsum.photos/id/1073/1400/900');">
+                <article class="project-item project-item--compact reveal-up" role="listitem" id="project-secureguard"
+                    data-cats="desktop" data-title="SecureGuard File Encryption Tool">
                     <div class="project-meta">
                         <div class="project-thumb" aria-hidden="true">
                             <i data-lucide="shield-check"></i>
@@ -620,23 +697,19 @@
 
                 <div class="skill-card reveal-up" style="--delay:0.1s">
                     <div class="skill-card-icon" aria-hidden="true"><i data-lucide="database"></i></div>
-                    <h3 class="skill-card-title">Full-Stack Backend</h3>
-                    <p class="skill-card-copy">How I build reliable backends: APIs, auth, data modeling, real-time features,
-                        and deployment-ready infrastructure.</p>
-                    <ul class="skill-tags" aria-label="Full-stack backend skills">
+                    <h3 class="skill-card-title">Applied Full-Stack</h3>
+                    <p class="skill-card-copy">The backend and data skills demonstrated across my deployed portfolio
+                        projects.</p>
+                    <ul class="skill-tags" aria-label="Applied full-stack skills">
                         <li class="tag">Node.js</li>
-                        <li class="tag">Express.js</li>
-                        <li class="tag">NestJS</li>
+                        <li class="tag">Next.js</li>
                         <li class="tag">REST APIs</li>
-                        <li class="tag">WebSockets</li>
-                        <li class="tag">Auth/JWT</li>
-                        <li class="tag">SQL</li>
+                        <li class="tag">Supabase Auth</li>
+                        <li class="tag">Role-Based Access</li>
                         <li class="tag">PostgreSQL</li>
-                        <li class="tag">MySQL</li>
-                        <li class="tag">MongoDB</li>
-                        <li class="tag">Redis Caching</li>
-                        <li class="tag">Docker</li>
-                        <li class="tag">CI/CD</li>
+                        <li class="tag">Row Level Security</li>
+                        <li class="tag">Data Import/Export</li>
+                        <li class="tag">Vitest</li>
                     </ul>
                 </div>
 
@@ -649,6 +722,9 @@
                         <li class="tag">Git</li>
                         <li class="tag">GitHub</li>
                         <li class="tag">VS Code</li>
+                        <li class="tag">Vercel</li>
+                        <li class="tag">C# / .NET</li>
+                        <li class="tag">Python</li>
                         <li class="tag">Tableau</li>
                         <li class="tag">Power BI</li>
                         <li class="tag">Flourish</li>
@@ -731,7 +807,7 @@
         </div>
     </footer>
 
-    <button class="back-top" id="back-top" aria-label="Scroll back to top of page">
+    <button type="button" class="back-top" id="back-top" aria-label="Scroll back to top of page">
         <i data-lucide="arrow-up" aria-hidden="true"></i>
     </button>
 

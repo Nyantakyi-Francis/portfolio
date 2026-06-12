@@ -446,6 +446,11 @@ body::before {
     z-index: 1;
 }
 
+.hero-text,
+.hero-image {
+    min-width: 0;
+}
+
 .hero-eyebrow {
     font-family: var(--font-mono);
     font-size: 0.8rem;
@@ -453,6 +458,7 @@ body::before {
     letter-spacing: 0.12em;
     text-transform: uppercase;
     margin-bottom: var(--space-md);
+    overflow-wrap: anywhere;
 }
 
 .hero-name {
@@ -910,6 +916,85 @@ body::before {
     transform: translateX(2px);
 }
 
+.credentials-block {
+    margin-top: var(--space-2xl);
+    padding: var(--space-xl);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: linear-gradient(135deg, rgba(110, 231, 247, 0.06), rgba(167, 139, 250, 0.04));
+}
+
+.credentials-heading {
+    margin-bottom: var(--space-lg);
+}
+
+.credentials-heading h3 {
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: var(--text-1);
+}
+
+.credentials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+}
+
+.credential-card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    background: rgba(8, 12, 18, 0.45);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.credential-icon {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    color: var(--accent);
+    background: var(--accent-dim);
+    border: 1px solid var(--border-hi);
+    border-radius: var(--radius-sm);
+}
+
+.credential-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.credential-date {
+    margin-bottom: 0.35rem;
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.credential-card h3 {
+    margin-bottom: 0.25rem;
+    color: var(--text-1);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.credential-card h3 + p {
+    color: var(--text-2);
+    font-size: 0.88rem;
+}
+
+.credential-detail {
+    margin-top: 0.65rem;
+    color: var(--text-3);
+    font-size: 0.84rem;
+    line-height: 1.65;
+}
+
 /* ======================================================
    PROJECTS
 ====================================================== */
@@ -1007,55 +1092,56 @@ body::before {
     line-height: 1.65;
 }
 
-.projects-toolbar {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--space-md);
-    padding: 1.2rem 0 0.4rem;
-}
-
-.filter-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.filter-btn {
-    font-family: var(--font-mono);
-    font-size: 0.8rem;
-    padding: 8px 12px;
-    border-radius: 999px;
-    border: 1px solid rgba(255, 255, 255, 0.10);
-    color: var(--text-2);
-    background: rgba(255, 255, 255, 0.02);
-    transition: border-color var(--dur) var(--ease), background var(--dur) var(--ease), color var(--dur) var(--ease), transform var(--dur-fast) var(--ease), box-shadow var(--dur) var(--ease);
-}
-
-.filter-btn:hover {
-    border-color: var(--border-hi);
-    background: rgba(110, 231, 247, 0.08);
-    color: var(--text-1);
-    transform: translateY(-1px);
-}
-
-.filter-btn.is-active {
-    border-color: rgba(110, 231, 247, 0.25);
-    background: linear-gradient(135deg, rgba(110, 231, 247, 0.18), rgba(167, 139, 250, 0.10));
-    color: var(--text-1);
-    box-shadow: 0 16px 40px rgba(110, 231, 247, 0.06);
-}
-
-.filter-meta {
-    color: var(--text-3);
-    font-size: 0.85rem;
-}
-
 .projects-list {
     display: flex;
     flex-direction: column;
     gap: 14px;
+}
+
+.project-item.project-item--case-study {
+    order: 1;
+    grid-template-columns: minmax(360px, 0.95fr) minmax(0, 1.05fr);
+}
+
+.more-projects-heading {
+    order: 2;
+    padding: var(--space-2xl) 0 var(--space-sm);
+}
+
+.more-projects-heading h3 {
+    color: var(--text-1);
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.project-item.project-item--compact {
+    order: 3;
+    grid-template-columns: 72px minmax(0, 1fr);
+    padding: var(--space-lg);
+}
+
+.project-item--compact .project-desc,
+.project-item--compact .project-highlights,
+.project-item--compact .project-note {
+    display: none;
+}
+
+.project-item--compact .project-name {
+    font-size: 1.2rem;
+}
+
+.project-screenshot {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    object-position: top;
+    align-self: flex-start;
+    flex: none;
+    margin-bottom: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
 }
 
 .project-item {
@@ -1532,20 +1618,32 @@ body::before {
 ====================================================== */
 .reveal-up,
 .reveal-right {
-    opacity: 0;
+    opacity: 1;
 }
 
 /* ======================================================
    RESPONSIVE
 ====================================================== */
+@media (max-width: 1100px) {
+    .project-item.project-item--case-study {
+        grid-template-columns: 1fr;
+    }
+
+    .project-item--case-study .project-meta {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+    }
+
+    .project-item--case-study .project-screenshot {
+        grid-column: 1 / -1;
+    }
+}
+
 @media (max-width: 960px) {
     .hero-layout {
         grid-template-columns: 1fr;
         text-align: center;
-    }
-
-    .hero-image {
-        order: -1;
     }
 
     .hero-bio {
@@ -1572,6 +1670,11 @@ body::before {
     .skills-grid {
         grid-template-columns: 1fr 1fr;
     }
+
+    .credentials-grid {
+        grid-template-columns: 1fr;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -1613,7 +1716,11 @@ body::before {
         gap: var(--space-sm);
     }
 
-    .project-meta {
+    .project-item.project-item--compact {
+        grid-template-columns: 1fr;
+    }
+
+    .project-item--compact .project-meta {
         flex-direction: row;
         align-items: center;
     }
@@ -1663,6 +1770,17 @@ body::before {
         font-size: 2.5rem;
     }
 
+    .hero-eyebrow {
+        max-width: 100%;
+        font-size: 0.7rem;
+        line-height: 1.7;
+    }
+
+    .hero-bio,
+    .proof-pill {
+        overflow-wrap: anywhere;
+    }
+
     .btn {
         width: 100%;
         justify-content: center;
@@ -1683,6 +1801,15 @@ body::before {
     .advantage-card,
     .contact-offers li {
         padding: 1rem;
+    }
+
+    .credentials-block,
+    .credential-card {
+        padding: 1rem;
+    }
+
+    .credential-card {
+        grid-template-columns: 1fr;
     }
 
     .contact-offers li {
@@ -1910,7 +2037,6 @@ body::before {
 .btn:focus-visible,
 .edu-link:focus-visible,
 .project-link:focus-visible,
-.filter-btn:focus-visible,
 .featured-card:focus-visible,
 .contact-btn:focus-visible,
 .back-top:focus-visible,
