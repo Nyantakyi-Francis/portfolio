@@ -916,6 +916,131 @@ body::before {
     transform: translateX(2px);
 }
 
+/* ======================================================
+   PHOTO GALLERY
+====================================================== */
+.photo-gallery {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: var(--space-lg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: linear-gradient(145deg, rgba(110, 231, 247, 0.06), rgba(8, 12, 18, 0.9));
+    box-shadow: var(--shadow-md);
+}
+
+.photo-gallery-track {
+    display: grid;
+    overflow: hidden;
+    border-radius: var(--radius);
+    background: var(--bg);
+}
+
+.photo-slide {
+    grid-area: 1 / 1;
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto;
+    min-width: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.65s var(--ease), visibility 0.65s;
+}
+
+.photo-slide.is-active {
+    position: relative;
+    z-index: 1;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.photo-slide img {
+    width: 100%;
+    height: min(68vh, 680px);
+    object-fit: contain;
+    object-position: center;
+    background: #05080d;
+}
+
+.photo-slide figcaption {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-lg);
+    padding: var(--space-md) var(--space-lg);
+    border-top: 1px solid var(--border);
+    background: var(--surface);
+}
+
+.photo-slide figcaption strong {
+    color: var(--text-1);
+    font-weight: 500;
+}
+
+.photo-slide figcaption span {
+    color: var(--text-2);
+    text-align: right;
+}
+
+.photo-gallery-controls {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.photo-gallery-arrow {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--border-hi);
+    border-radius: 50%;
+    color: var(--accent);
+    transition: color var(--dur-fast) ease, background var(--dur-fast) ease,
+        transform var(--dur-fast) ease;
+}
+
+.photo-gallery-arrow:hover {
+    color: var(--bg);
+    background: var(--accent);
+    transform: translateY(-2px);
+}
+
+.photo-gallery-arrow svg {
+    width: 20px;
+    height: 20px;
+}
+
+.photo-gallery-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.7rem;
+}
+
+.photo-gallery-dot {
+    width: 11px;
+    height: 11px;
+    border: 1px solid var(--text-3);
+    border-radius: 50%;
+    transition: width var(--dur-fast) ease, border-color var(--dur-fast) ease,
+        background var(--dur-fast) ease;
+}
+
+.photo-gallery-dot.is-active {
+    width: 30px;
+    border-color: var(--accent);
+    border-radius: 999px;
+    background: var(--accent);
+}
+
+.photo-gallery-arrow:focus-visible,
+.photo-gallery-dot:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
 .credentials-block {
     margin-top: var(--space-2xl);
     padding: var(--space-xl);
@@ -1817,6 +1942,40 @@ body::before {
     }
 }
 
+@media (max-width: 768px) {
+    .photo-gallery {
+        padding: var(--space-md);
+    }
+
+    .photo-slide img {
+        height: min(65vh, 560px);
+    }
+
+    .photo-slide figcaption {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .photo-slide figcaption span {
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .photo-gallery {
+        padding: 0.75rem;
+    }
+
+    .photo-slide img {
+        height: min(62vh, 480px);
+    }
+
+    .photo-slide figcaption {
+        padding: 0.9rem;
+        font-size: 0.9rem;
+    }
+}
+
 /* ======================================================
    SCROLLBAR (webkit)
 ====================================================== */
@@ -2103,6 +2262,12 @@ body::before {
         animation: none !important;
         transition: none !important;
         transform: none !important;
+    }
+
+    .photo-slide,
+    .photo-gallery-arrow,
+    .photo-gallery-dot {
+        transition: none !important;
     }
 
     .reveal-up,

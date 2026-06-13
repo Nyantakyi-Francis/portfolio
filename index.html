@@ -27,7 +27,7 @@
     <meta name="twitter:image"
         content="https://nyantakyi-francis.github.io/portfolio/images/francis-nyantakyi-software-developer.jpg" />
     <script
-        type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Francis Nyantakyi","url":"https://nyantakyi-francis.github.io/portfolio/","jobTitle":"Full-Stack Developer","description":"Full-stack developer and educator building data-backed products for education, analytics, business operations, and social impact.","alumniOf":[{"@type":"CollegeOrUniversity","name":"Brigham Young University-Idaho"},{"@type":"CollegeOrUniversity","name":"Mampong Technical College of Education"}],"hasCredential":[{"@type":"EducationalOccupationalCredential","name":"Web Development Certificate","credentialCategory":"Certificate","recognizedBy":{"@type":"CollegeOrUniversity","name":"Brigham Young University-Idaho"}},{"@type":"EducationalOccupationalCredential","name":"Web & Computer Programming Certificate","credentialCategory":"Certificate","recognizedBy":{"@type":"CollegeOrUniversity","name":"Brigham Young University-Idaho"}}]}</script>
+        type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Francis Nyantakyi","url":"https://nyantakyi-francis.github.io/portfolio/","image":["https://nyantakyi-francis.github.io/portfolio/images/francis-nyantakyi-software-developer.jpg","https://nyantakyi-francis.github.io/portfolio/images/francis-nyantakyi-professional-portrait.jpg","https://nyantakyi-francis.github.io/portfolio/images/francis-nyantakyi-seated-portrait.webp"],"jobTitle":"Full-Stack Developer","description":"Full-stack developer and educator building data-backed products for education, analytics, business operations, and social impact.","alumniOf":[{"@type":"CollegeOrUniversity","name":"Brigham Young University-Idaho"},{"@type":"CollegeOrUniversity","name":"Mampong Technical College of Education"}],"hasCredential":[{"@type":"EducationalOccupationalCredential","name":"Web Development Certificate","credentialCategory":"Certificate","recognizedBy":{"@type":"CollegeOrUniversity","name":"Brigham Young University-Idaho"}},{"@type":"EducationalOccupationalCredential","name":"Web & Computer Programming Certificate","credentialCategory":"Certificate","recognizedBy":{"@type":"CollegeOrUniversity","name":"Brigham Young University-Idaho"}}]}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -232,6 +232,70 @@
             </div>
         </div>
     </section>
+    <section class="section photo-gallery-section" id="gallery" aria-labelledby="gallery-heading">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <p class="section-eyebrow">Photo Gallery</p>
+                <h2 class="section-title" id="gallery-heading">Francis Nyantakyi</h2>
+                <p class="section-intro">Professional and personal portraits of Francis Nyantakyi, a full-stack
+                    developer and educator based in Ghana.</p>
+            </div>
+
+            <div class="photo-gallery reveal-up" id="photo-gallery" role="region"
+                aria-roledescription="carousel" aria-label="Portraits of Francis Nyantakyi">
+                <div class="photo-gallery-track">
+                    <figure class="photo-slide is-active" data-photo-slide aria-hidden="false">
+                        <img src="images/francis-nyantakyi-software-developer.jpg"
+                            alt="Francis Nyantakyi standing outdoors in Ghana with a red book"
+                            width="810" height="1080" loading="eager" />
+                        <figcaption>
+                            <strong>Francis Nyantakyi, software developer and educator</strong>
+                            <span>Outdoor professional portrait in Ghana.</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="photo-slide" data-photo-slide aria-hidden="true">
+                        <img src="images/francis-nyantakyi-professional-portrait.jpg"
+                            alt="Professional studio portrait of Francis Nyantakyi wearing a blue shirt"
+                            width="863" height="1080" loading="lazy" />
+                        <figcaption>
+                            <strong>Francis Nyantakyi</strong>
+                            
+                        </figcaption>
+                    </figure>
+                    <figure class="photo-slide" data-photo-slide aria-hidden="true">
+                        <img src="images/francis-nyantakyi-seated-portrait.webp"
+                            alt="Francis Nyantakyi seated indoors in Ghana wearing sunglasses"
+                            width="763" height="979" loading="lazy" />
+                        <figcaption>
+                            <strong>Francis Nyantakyi</strong>
+                           
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <div class="photo-gallery-controls">
+                    <button type="button" class="photo-gallery-arrow" data-gallery-previous
+                        aria-label="Show previous portrait">
+                        <i data-lucide="chevron-left" aria-hidden="true"></i>
+                    </button>
+                    <div class="photo-gallery-indicators" role="group" aria-label="Choose a portrait">
+                        <button type="button" class="photo-gallery-dot is-active" data-gallery-indicator="0"
+                            aria-label="Show portrait 1" aria-current="true"></button>
+                        <button type="button" class="photo-gallery-dot" data-gallery-indicator="1"
+                            aria-label="Show portrait 2" aria-current="false"></button>
+                        <button type="button" class="photo-gallery-dot" data-gallery-indicator="2"
+                            aria-label="Show portrait 3" aria-current="false"></button>
+                    </div>
+                    <button type="button" class="photo-gallery-arrow" data-gallery-next
+                        aria-label="Show next portrait">
+                        <i data-lucide="chevron-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <p class="sr-only" id="photo-gallery-status" aria-live="polite">Portrait 1 of 3</p>
+            </div>
+        </div>
+    </section>
+
     <section class="section section-dark" id="projects" aria-labelledby="projects-heading">
         <div class="container">
             <div class="section-header reveal-up">

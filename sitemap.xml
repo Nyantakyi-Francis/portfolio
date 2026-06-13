@@ -1,8 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://nyantakyi-francis.github.io/portfolio/</loc>
-    <lastmod>2026-06-12</lastmod>
+    <lastmod>2026-06-13</lastmod>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://nyantakyi-francis.github.io/portfolio/images/francis-nyantakyi-software-developer.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://nyantakyi-francis.github.io/portfolio/images/francis-nyantakyi-professional-portrait.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://nyantakyi-francis.github.io/portfolio/images/francis-nyantakyi-seated-portrait.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://nyantakyi-francis.github.io/portfolio/images/projects/student-performance.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://nyantakyi-francis.github.io/portfolio/images/projects/math-quiz.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://nyantakyi-francis.github.io/portfolio/images/projects/royal-hall.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://nyantakyi-francis.github.io/portfolio/images/projects/prestige-drinks.webp</image:loc>
+    </image:image>
   </url>
 </urlset>

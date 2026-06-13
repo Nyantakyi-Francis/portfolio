@@ -18,6 +18,111 @@
   const navLinks = document.querySelectorAll('.nav-link');
   const burger = document.getElementById('nav-burger');
   const navMenu = document.getElementById('nav-links');
+  const photoGallery = document.getElementById('photo-gallery');
+
+  if (photoGallery) {
+    const slides = Array.from(photoGallery.querySelectorAll('[data-photo-slide]'));
+    const indicators = Array.from(photoGallery.querySelectorAll('[data-gallery-indicator]'));
+    const previousButton = photoGallery.querySelector('[data-gallery-previous]');
+    const nextButton = photoGallery.querySelector('[data-gallery-next]');
+    const status = document.getElementById('photo-gallery-status');
+    let activeIndex = 0;
+    let autoplayId = null;
+    let pointerPaused = false;
+    let focusPaused = false;
+
+    function showSlide(index, announce = false) {
+      activeIndex = (index + slides.length) % slides.length;
+
+      slides.forEach((slide, slideIndex) => {
+        const isActive = slideIndex === activeIndex;
+        slide.classList.toggle('is-active', isActive);
+        slide.setAttribute('aria-hidden', String(!isActive));
+      });
+
+      indicators.forEach((indicator, indicatorIndex) => {
+        const isActive = indicatorIndex === activeIndex;
+        indicator.classList.toggle('is-active', isActive);
+        indicator.setAttribute('aria-current', String(isActive));
+      });
+
+      if (status) {
+        status.textContent = `Portrait ${activeIndex + 1} of ${slides.length}`;
+        status.setAttribute('aria-live', announce ? 'polite' : 'off');
+      }
+    }
+
+    function stopAutoplay() {
+      if (autoplayId !== null) {
+        window.clearInterval(autoplayId);
+        autoplayId = null;
+      }
+    }
+
+    function startAutoplay() {
+      stopAutoplay();
+      if (!prefersReducedMotion && !pointerPaused && !focusPaused && !document.hidden) {
+        autoplayId = window.setInterval(() => showSlide(activeIndex + 1), 5000);
+      }
+    }
+
+    function selectSlide(index) {
+      showSlide(index, true);
+      startAutoplay();
+    }
+
+    previousButton?.addEventListener('click', () => selectSlide(activeIndex - 1));
+    nextButton?.addEventListener('click', () => selectSlide(activeIndex + 1));
+
+    indicators.forEach((indicator) => {
+      indicator.addEventListener('click', () => {
+        selectSlide(Number(indicator.dataset.galleryIndicator));
+      });
+    });
+
+    photoGallery.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        selectSlide(activeIndex - 1);
+      } else if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        selectSlide(activeIndex + 1);
+      } else if (event.key === 'Home') {
+        event.preventDefault();
+        selectSlide(0);
+      } else if (event.key === 'End') {
+        event.preventDefault();
+        selectSlide(slides.length - 1);
+      }
+    });
+
+    photoGallery.addEventListener('mouseenter', () => {
+      pointerPaused = true;
+      stopAutoplay();
+    });
+
+    photoGallery.addEventListener('mouseleave', () => {
+      pointerPaused = false;
+      startAutoplay();
+    });
+
+    photoGallery.addEventListener('focusin', () => {
+      focusPaused = true;
+      stopAutoplay();
+    });
+
+    photoGallery.addEventListener('focusout', (event) => {
+      if (!photoGallery.contains(event.relatedTarget)) {
+        focusPaused = false;
+        startAutoplay();
+      }
+    });
+
+    document.addEventListener('visibilitychange', startAutoplay);
+    showSlide(0);
+    startAutoplay();
+  }
+
   if (!prefersReducedMotion && typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);
 
